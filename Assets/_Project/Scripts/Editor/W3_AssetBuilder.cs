@@ -87,12 +87,14 @@ namespace RPGStarter.EditorTools
         public  const int INVENTORY_HOTBAR_START = 40;
         public  const int INVENTORY_HOTBAR_SIZE  = 10;
 
-        // Demo roster: only the items whose primitive / real-mesh visuals look
-        // credible in-hand. Bow / Axe / Mace / Spear were dropped — their cube-and-
-        // stick primitives didn't read as weapons. Sword + Shield uses real .fbx
-        // assets, the three tools have recognisable handle + head shapes.
+        // Demo roster: Bow is back (the user wants arrow shooting to work — the
+        // BasicShot ability + pooled-arrow system function regardless of the
+        // primitive bow visual). Mace / Spear / W2 Axe stay dropped — their
+        // cube primitives read as nothing and the gameplay is just a re-skin
+        // of the slash anyway.
         private static readonly (string weaponPath, string itemPath, string iconFile, string display)[] WEAPON_ITEMS =
         {
+            ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Bow.asset",         DIR_ITEMS + "/Item_Weapon_Bow.asset",         "Bow.png",          "Bow"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_SwordShield.asset", DIR_ITEMS + "/Item_Weapon_SwordShield.asset", "Iron Sword.png",   "Sword & Shield"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Hammer.asset",      DIR_ITEMS + "/Item_Weapon_Hammer.asset",      "Hammer.png",       "Hammer"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Pickaxe.asset",     DIR_ITEMS + "/Item_Weapon_Pickaxe.asset",     "Pickaxe.png",      "Pickaxe"),

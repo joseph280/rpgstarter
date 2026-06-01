@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace RPGStarter.EditorTools
@@ -81,6 +82,9 @@ namespace RPGStarter.EditorTools
 
                 Step(++n, total, "Addressables sync (register test scene + Bootstrap)");
                 TrySyncAddressablesWithRepairFallback();
+
+                Step(n, total, "Scene cleanup (strip stale RefPillar_* GameObjects)");
+                StripLegacyRefPillars();
             }
             finally
             {
@@ -118,6 +122,37 @@ namespace RPGStarter.EditorTools
                 Debug.LogWarning($"[Build] Addressables Sync threw NRE ({nre.Message}). " +
                                  "Falling back to Repair (nuke AddressableAssetsData/ and rebuild).");
                 W1_AddressablesSync.Repair();
+            }
+        }
+
+        /// <summary>
+        /// Test_PlayerMovement.unity shipped with 4 "RefPillar_*" cube pillars
+        /// (placed by the old W1_SceneBuilder so movement was visible against
+        /// the empty floor). They're baked into the scene file, so removing the
+        /// build-time placement code didn't get rid of them. This step opens
+        /// the scene, destroys any GameObject whose name starts with
+        /// "RefPillar_", and saves. Idempotent — no-op once the scene's clean.
+        /// </summary>
+        private static void StripLegacyRefPillars()
+        {
+            const string SCENE = "Assets/_Project/Tests/PlayMode/Test_PlayerMovement.unity";
+            var scene = EditorSceneManager.OpenScene(SCENE, OpenSceneMode.Single);
+            if (!scene.IsValid()) return;
+
+            int removed = 0;
+            foreach (var root in scene.GetRootGameObjects())
+            {
+                if (root.name.StartsWith("RefPillar_"))
+                {
+                    Object.DestroyImmediate(root);
+                    removed++;
+                }
+            }
+            if (removed > 0)
+            {
+                EditorSceneManager.MarkSceneDirty(scene);
+                EditorSceneManager.SaveScene(scene);
+                Debug.Log($"[Build] Stripped {removed} legacy RefPillar GameObject(s) from {SCENE}.");
             }
         }
 

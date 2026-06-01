@@ -23,10 +23,17 @@ namespace RPGStarter.EditorTools
         private const string DIR_ABILITY  = "Assets/_Project/ScriptableObjects/Abilities";
         private const string DIR_DAMAGE   = "Assets/_Project/ScriptableObjects/GameConfig";
 
+        private const string PATH_BOW          = DIR_WEAPONS  + "/Weapon_Bow.asset";
         private const string PATH_SWORD_SHIELD = DIR_WEAPONS  + "/Weapon_SwordShield.asset";
 
         private const string PATH_SLASH_AB = DIR_ABILITY  + "/Ability_PhantomArcher_BasicSlash.asset";
+        private const string PATH_SHOT_AB  = DIR_ABILITY  + "/Ability_PhantomArcher_BasicShot.asset";
         private const string PATH_DMG_PHYS = DIR_DAMAGE   + "/DamageType_Physical.asset";
+
+        // Bow visual = Demo_PrimitiveAssets' thin tall cube. Reads as a stick more
+        // than a bow but the gameplay function (BasicShot ability → pooled arrow)
+        // works against any visual.
+        private const string PREFAB_BOW    = Demo_PrimitiveAssets.SRC_BOW;
 
         // Sword + shield are in _Project/Art/Weapons. Wrapper prefabs are generated
         // below with URP/Lit materials bound to the loose albedo PNGs that ship
@@ -50,6 +57,12 @@ namespace RPGStarter.EditorTools
         private static readonly Vector3 RIGHTHAND_EULER = new(90f, -90f, 0f);
         private static readonly Vector3 RIGHTHAND_SCALE = new(0.5f, 0.5f, 0.5f);
 
+        // Bow grip — LeftHand. Tip-up orientation so the primitive cube reads as a
+        // vertical bow stave.
+        private static readonly Vector3 LEFTHAND_BOW_POS   = new(0f, 0.05f, 0.02f);
+        private static readonly Vector3 LEFTHAND_BOW_EULER = new(-90f, 90f, 0f);
+        private static readonly Vector3 LEFTHAND_BOW_SCALE = new(0.5f, 0.5f, 0.5f);
+
         // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
@@ -57,14 +70,21 @@ namespace RPGStarter.EditorTools
             EnsureDir(DIR_ABILITY);
 
             var slashAbility = EnsureSlashAbility();
+            var shotAbility  = AssetDatabase.LoadAssetAtPath<AbilityDefinitionSO>(PATH_SHOT_AB);
+            if (shotAbility == null)
+                Debug.LogWarning("[W2_WeaponBuilder] BasicShot ability not found — Bow will reference null until W2_AssetBuilder runs.");
 
-            // Animation clips — only the slash is used now. Bow / Mace / Spear / Axe
-            // weapons were dropped from the demo (their primitive stand-ins read as
-            // cubes-in-hand and added nothing to the showcase). Sword + Shield uses
-            // real .fbx mesh assets under _Project/Art/Weapons, so it's the one
-            // visually-credible combat option that survives.
+            // Animation clips. Bow uses the bow-fire clip; sword & shield share the slash.
             var slashClip = W2_AnimatorPatcher.LoadFirstClip(W2_AnimatorPatcher.CLIP_ATTACK_PLACEHOLDER);
+            var bowClip   = W2_AnimatorPatcher.LoadFirstClip(W2_AnimatorPatcher.CLIP_BOW);
             if (slashClip == null) Debug.LogError("[W2_WeaponBuilder] Slash clip missing — animator step hasn't run.");
+            if (bowClip   == null) Debug.LogError("[W2_WeaponBuilder] Bow clip missing — animator step hasn't run.");
+
+            // Bow — primitive thin-cube visual, BasicShot ability spawns the pooled arrow.
+            var bowPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(PREFAB_BOW);
+            EnsureWeapon(PATH_BOW, "Bow", bowPrefab, HumanBodyBones.LeftHand,
+                         LEFTHAND_BOW_POS, LEFTHAND_BOW_EULER, LEFTHAND_BOW_SCALE,
+                         bowClip, shotAbility);
 
             // Sword & Shield: dual-equip — sword in right hand, shield in left.
             var (swordWrapper, shieldWrapper) = EnsureSwordAndShieldWrappers();
