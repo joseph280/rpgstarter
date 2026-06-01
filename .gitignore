@@ -1,0 +1,119 @@
+# =============================================================================
+# .gitignore — Celestia: The Convergence (Unity 6 + URP)
+# =============================================================================
+# Tells Git which files to NEVER track. Unity regenerates most of these on
+# project open; committing them creates merge conflicts and bloats the repo.
+# =============================================================================
+
+
+# ---------- Unity-generated folders (regenerated automatically) ----------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+
+# Asset meta files for ignored folders
+!/[Aa]ssets/**/*.meta
+
+
+# ---------- Build outputs ----------
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.dmg
+*.x86_64
+*.x86
+
+# Crash reports
+sysinfo.txt
+crashlytics-build.properties
+
+
+# ---------- IDE & editor files ----------
+# Visual Studio / Rider / VS Code generate these from Unity's project files.
+# Unity regenerates them; never commit.
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+
+# ---------- Asset Store imports (each dev installs locally) ----------
+# Per CLAUDE.md §2, asset-store packs that are large or licensed-as-installer
+# (e.g. Unity's Starter Assets) live OUTSIDE git. Each dev imports via Package
+# Manager / Asset Store on first setup. Includes this folder if installed at
+# the default Asset Store path. Move to Assets/ThirdParty/ if you need it
+# version-controlled with the project.
+/[Aa]ssets/[Ss]tarter [Aa]ssets/
+/[Aa]ssets/[Ss]tarter [Aa]ssets.meta
+*.svd
+*.unityproj
+*.tmp
+*.tmp_proj
+*.opendb
+*.VC.db
+ExportedObj/
+.consulo/
+
+
+# ---------- OS junk ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+
+# ---------- Package manager ----------
+# Keep packages-lock.json — it pins package versions across the team
+# Don't ignore Packages/manifest.json — it defines what packages we use
+
+
+# ---------- Asset Bundles ----------
+# Generated outputs from Addressables / AssetBundle builds
+[Aa]ssetBundles/
+[Aa]ssetBundles.meta
+*.unity3d
+*.unity3d.meta
+
+
+# ---------- Profiler & Test outputs ----------
+*.profile
+[Tt]estResults*.xml
+
+
+# ---------- Secrets (never commit) ----------
+# If you ever add API keys, analytics IDs, signing keys: put them here.
+*.pem
+*.key
+*.p12
+*.keystore
+secrets.json
+.env
+.env.local
+
+
+# ---------- Misc ----------
+# Backup files from text editors
+*.bak
+*.swp
+*~
+
+# Old Unity asset server
+sysinfo.txt

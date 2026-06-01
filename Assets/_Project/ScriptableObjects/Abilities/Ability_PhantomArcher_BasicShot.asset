@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b44767d733d46c5a97a2d8aa08d421, type: 3}
+  m_Name: Ability_PhantomArcher_BasicShot
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.AbilityDefinitionSO
+  displayName: Quick Shot
+  description: Phantom Archer's basic bow attack. Snap-fire arrow at the cursor.
+  damage: 12
+  range: 30
+  cooldown: 0.4
+  celestiaCost: 0
+  damageType: {fileID: 11400000, guid: 7b67e63752a8346d98f946d1c0d95ab3, type: 2}
+  animatorStateName: Attack
+  animatorLayer: 1
+  faceAimOnCast: 1
+  aimYawOffset: 90
+  movementSlowFactor: 1
+  projectilePrefab: {fileID: 8533179798061762408, guid: 75168582952cb4bf5a73758695ef2490, type: 3}
+  sfxOnCast: {fileID: 0}
+  vfxOnCast: {fileID: 0}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b910650d32369454bab6321715ba4870, type: 3}
+  m_Name: Enemy_TargetDummy
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.EnemyDefinitionSO
+  displayName: Target Dummy
+  description: Stationary practice target. No AI.
+  maxHealth: 60
+  baseDamage: 0
+  baseAttackRate: 0
+  moveSpeed: 3.5
+  detectionRadius: 12
+  loseInterestRadius: 24
+  attackRange: 1.8
+  attackWindup: 0.35
+  attackDuration: 0.85
+  deathDuration: 2.5
+  resistTypes: []
+  resistMultipliers: []
+  prefab: {fileID: 4073945713397758862, guid: ab5ae61de2cb3464cadb9219fd4f34a5, type: 3}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}

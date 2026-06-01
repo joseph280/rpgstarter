@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b44767d733d46c5a97a2d8aa08d421, type: 3}
+  m_Name: Ability_PlaceCraftingTable
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.AbilityDefinitionSO
+  displayName: Place Crafting Table
+  description: Put down a crafting table at the cursor.
+  damage: 0
+  range: 6
+  cooldown: 0.5
+  celestiaCost: 0
+  damageType: {fileID: 11400000, guid: 7b67e63752a8346d98f946d1c0d95ab3, type: 2}
+  animatorStateName: 
+  animatorLayer: 0
+  faceAimOnCast: 0
+  aimYawOffset: 0
+  movementSlowFactor: 0
+  projectilePrefab: {fileID: 0}
+  sfxOnCast: {fileID: 0}
+  vfxOnCast: {fileID: 0}
+  placedPrefab: {fileID: 8036362607418525942, guid: 4f8695258f5404859a20a0d953a97156, type: 3}
+  consumeOnPlace: {fileID: 11400000, guid: 2da41f733595f490ca46c97cc68e02eb, type: 2}

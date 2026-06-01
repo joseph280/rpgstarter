@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
+  m_Name: Weapon_Pickaxe
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  displayName: Pickaxe
+  mainPrefab: {fileID: 1392316285209212, guid: 869385138ceeb3c4e9ed5f72da8d50d7, type: 3}
+  mainHand: 18
+  mainLocalPos: {x: -0.018, y: 0.128, z: -0.015}
+  mainLocalEuler: {x: 28.784775, y: 305.3514, z: 90.00002}
+  mainLocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  offHandPrefab: {fileID: 0}
+  offHand: 17
+  offHandLocalPos: {x: 0, y: 0, z: 0}
+  offHandLocalEuler: {x: 0, y: 0, z: 0}
+  offHandLocalScale: {x: 1, y: 1, z: 1}
+  attackClip: {fileID: -203655887218126122, guid: 29cdbc2e645a0432c897318851cb3998, type: 3}
+  ability: {fileID: 11400000, guid: 3c07f55aa524b42bf8c229b452bc5aaa, type: 2}
+  toolKind: {fileID: 11400000, guid: d8314253f403b48e3aaee86bba55bb36, type: 2}

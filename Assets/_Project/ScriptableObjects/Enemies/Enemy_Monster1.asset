@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b910650d32369454bab6321715ba4870, type: 3}
+  m_Name: Enemy_Monster1
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.EnemyDefinitionSO
+  displayName: Monster
+  description: "Melee chaser \u2014 walks toward the player and swings when in range.
+    Slower than the Phantom Archer."
+  maxHealth: 80
+  baseDamage: 8
+  baseAttackRate: 1
+  moveSpeed: 3.5
+  detectionRadius: 12
+  loseInterestRadius: 24
+  attackRange: 1.8
+  attackWindup: 0.35
+  attackDuration: 0.85
+  deathDuration: 2.5
+  resistTypes: []
+  resistMultipliers: []
+  prefab: {fileID: 2845389921180263132, guid: 364ece9afd5614f8f9e459c50c7b9845, type: 3}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}

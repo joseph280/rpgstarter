@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
+  m_Name: Weapon_Hammer
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  displayName: Hammer
+  mainPrefab: {fileID: 1085285520790580, guid: 9f64ed5ce0216394d91f836dbefecf5d, type: 3}
+  mainHand: 18
+  mainLocalPos: {x: -0.053, y: 0.104, z: -0.063}
+  mainLocalEuler: {x: 20.25028, y: 305.57965, z: 90.00006}
+  mainLocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  offHandPrefab: {fileID: 0}
+  offHand: 17
+  offHandLocalPos: {x: 0, y: 0, z: 0}
+  offHandLocalEuler: {x: 0, y: 0, z: 0}
+  offHandLocalScale: {x: 1, y: 1, z: 1}
+  attackClip: {fileID: -203655887218126122, guid: 29cdbc2e645a0432c897318851cb3998, type: 3}
+  ability: {fileID: 11400000, guid: 3c07f55aa524b42bf8c229b452bc5aaa, type: 2}
+  toolKind: {fileID: 11400000, guid: a1f501ce4675344698b8a0d4a2f2f912, type: 2}

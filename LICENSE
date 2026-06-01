@@ -1,0 +1,90 @@
+PROPRIETARY LICENSE
+===================
+
+Celestia: The Convergence
+Copyright (c) 2026 Joseph Aguilar Feener. All rights reserved.
+
+This software, including all source code, assets, documentation, design
+documents, and related materials in this repository (the "Software"), is the
+proprietary and confidential property of Joseph Aguilar Feener ("the Owner").
+
+NO LICENSE GRANTED
+------------------
+
+No license, express or implied, is granted to any party by virtue of access
+to this repository. Access does not constitute permission to use, copy,
+modify, merge, publish, distribute, sublicense, or sell any portion of the
+Software.
+
+PERMITTED USE
+-------------
+
+The Software may be used, modified, and contributed to ONLY by:
+
+  1. The Owner.
+  2. Employees, contractors, and collaborators who have signed a separate
+     written agreement with the Owner that explicitly grants such rights
+     (including but not limited to employment contracts, contractor
+     agreements, contributor license agreements, or work-for-hire
+     agreements).
+
+All contributions made to the Software by such permitted parties are, unless
+otherwise agreed in writing, assigned to the Owner as work-for-hire under
+the terms of the applicable agreement.
+
+PROHIBITED USE
+--------------
+
+Without prior written permission from the Owner, no party may:
+
+  - Copy, distribute, or publish the Software in whole or in part.
+  - Use the Software, in whole or in part, in any other project,
+    commercial or non-commercial.
+  - Reverse engineer, decompile, or disassemble compiled builds of the
+    Software, except to the extent such activity is expressly permitted by
+    applicable law.
+  - Remove or alter any copyright, trademark, or proprietary notices
+    contained in the Software.
+  - Use the names, trademarks, or branding of the Software or the Owner
+    for any purpose other than as explicitly authorized in writing.
+
+THIRD-PARTY ASSETS
+------------------
+
+The Software may incorporate third-party assets (including but not limited
+to art packs, audio libraries, fonts, and code libraries) that are licensed
+to the Owner under separate terms. Those assets remain the property of their
+respective rights holders and are governed by their own licenses, which take
+precedence over this license for those specific assets. A list of
+third-party assets and their licenses is maintained in /docs/THIRD_PARTY.md.
+
+CONFIDENTIALITY
+---------------
+
+The Software contains confidential and proprietary information. Any party
+granted access agrees to maintain the confidentiality of the Software and
+not to disclose it to any third party without prior written consent from
+the Owner.
+
+NO WARRANTY
+-----------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+OWNER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT
+OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+CONTACT
+-------
+
+For licensing inquiries, permission requests, or questions regarding this
+license, contact:
+
+  Joseph Aguilar Feener
+  [your contact email]
+
+---
+
+Last updated: 2026-04-30

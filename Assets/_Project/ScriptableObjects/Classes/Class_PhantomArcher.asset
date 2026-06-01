@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2001ed57b3144fd291b6a1555ce936d, type: 3}
+  m_Name: Class_PhantomArcher
+  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.ClassDefinitionSO
+  displayName: Phantom Archer
+  description: Ranged glass cannon. Cloak + bow. Dodge-heavy. Subclass branch TBD.
+  maxHealth: 100
+  moveSpeed: 6
+  dodgeSpeed: 14
+  dodgeDuration: 0.25
+  dodgeCooldown: 0.6
+  animatorController: {fileID: 9100000, guid: 9302ce4c496184c9c80712fc294a22cb, type: 2}
+  basicAttack: {fileID: 11400000, guid: 8fd664686329449c0bdbc39bc285479a, type: 2}
+  abilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

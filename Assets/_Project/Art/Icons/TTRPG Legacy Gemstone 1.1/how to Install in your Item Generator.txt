@@ -1,0 +1,7 @@
+Copy / paste "Cut" and Uncut" folders only in "assets" folder on your "Item Generator" folder
+
+If you don't have "Item Generator" tool, You can download for free here
+
+https://ddant1100.itch.io/ttrpg-artefac-item-generator
+
+If you have some trouble to install the assets pack, contact me on Itchio
