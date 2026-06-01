@@ -80,7 +80,7 @@ namespace RPGStarter.EditorTools
                 W2_MaterialConverter.ConvertThirdPartyMaterials();
 
                 Step(++n, total, "Addressables sync (register test scene + Bootstrap)");
-                W1_AddressablesSync.Sync();
+                TrySyncAddressablesWithRepairFallback();
             }
             finally
             {
@@ -98,6 +98,40 @@ namespace RPGStarter.EditorTools
         {
             EditorUtility.DisplayProgressBar("Build Demo", $"{n}/{total}  {what}", n / (float)total);
             Debug.Log($"[Build] {n}/{total}  {what}");
+        }
+
+        /// <summary>
+        /// Addressables internals get corrupt periodically (missing IGroupTemplate,
+        /// null PlayMode build script). When Sync throws a NullReferenceException
+        /// from inside the Addressables editor code, we fall back to the nuclear
+        /// Repair: wipe AddressableAssetsData/, recreate defaults, retry the sync.
+        /// Idempotent — if Sync works on the first try this is a no-op.
+        /// </summary>
+        private static void TrySyncAddressablesWithRepairFallback()
+        {
+            try
+            {
+                W1_AddressablesSync.Sync();
+            }
+            catch (System.NullReferenceException nre)
+            {
+                Debug.LogWarning($"[Build] Addressables Sync threw NRE ({nre.Message}). " +
+                                 "Falling back to Repair (nuke AddressableAssetsData/ and rebuild).");
+                W1_AddressablesSync.Repair();
+            }
+        }
+
+        // ── Manual escape hatch ──────────────────────────────────────────────
+
+        /// <summary>
+        /// Manual fallback when Build Demo's automatic Addressables repair isn't
+        /// enough. Wipes Assets/AddressableAssetsData/ and lets the Addressables
+        /// package recreate its defaults, then re-registers the scene entries.
+        /// </summary>
+        [MenuItem("RPGStarter/Repair Addressables", priority = 50)]
+        public static void RepairAddressables()
+        {
+            W1_AddressablesSync.Repair();
         }
     }
 }
