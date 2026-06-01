@@ -126,12 +126,16 @@ namespace RPGStarter.EditorTools
         }
 
         /// <summary>
-        /// Test_PlayerMovement.unity shipped with 4 "RefPillar_*" cube pillars
-        /// (placed by the old W1_SceneBuilder so movement was visible against
-        /// the empty floor). They're baked into the scene file, so removing the
-        /// build-time placement code didn't get rid of them. This step opens
-        /// the scene, destroys any GameObject whose name starts with
-        /// "RefPillar_", and saves. Idempotent — no-op once the scene's clean.
+        /// Test_PlayerMovement.unity shipped with content that doesn't belong in
+        /// the demo any more: 4 "RefPillar_*" reference cubes (placed by the old
+        /// W1_SceneBuilder so movement was visible against the empty floor) and
+        /// 3 TargetDummy capsule training enemies + their DummyParent
+        /// (placed by W2_SceneBuilder for combat-practice). The Monster1 makes
+        /// the dummies redundant.
+        ///
+        /// This step opens the scene and destroys any root GameObject that's
+        /// in the strip list — by name prefix for the pillars, by exact name
+        /// for the dummy group. Idempotent — no-op once the scene's clean.
         /// </summary>
         private static void StripLegacyRefPillars()
         {
@@ -142,7 +146,10 @@ namespace RPGStarter.EditorTools
             int removed = 0;
             foreach (var root in scene.GetRootGameObjects())
             {
-                if (root.name.StartsWith("RefPillar_"))
+                bool kill = root.name.StartsWith("RefPillar_")
+                         || root.name == "DummyParent"
+                         || root.name == "TargetDummy";
+                if (kill)
                 {
                     Object.DestroyImmediate(root);
                     removed++;
@@ -152,7 +159,8 @@ namespace RPGStarter.EditorTools
             {
                 EditorSceneManager.MarkSceneDirty(scene);
                 EditorSceneManager.SaveScene(scene);
-                Debug.Log($"[Build] Stripped {removed} legacy RefPillar GameObject(s) from {SCENE}.");
+                Debug.Log($"[Build] Scene cleanup: stripped {removed} legacy GameObject(s) " +
+                          $"(RefPillar_* / DummyParent / TargetDummy) from {SCENE}.");
             }
         }
 
