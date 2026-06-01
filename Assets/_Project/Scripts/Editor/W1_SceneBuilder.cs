@@ -76,15 +76,6 @@ namespace RPGStarter.EditorTools
             var floorMat = AssetDatabase.LoadAssetAtPath<Material>(FLOOR_MAT_PATH);
             if (floorMat != null) floor.GetComponent<MeshRenderer>().sharedMaterial = floorMat;
 
-            // Reference grid: a few primitives so movement is visible
-            for (int i = 0; i < 4; i++)
-            {
-                var pillar = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                pillar.name = $"RefPillar_{i}";
-                pillar.transform.localScale = new Vector3(0.5f, 2f, 0.5f);
-                pillar.transform.position   = new Vector3(Mathf.Cos(i * 1.57f) * 5f, 1f, Mathf.Sin(i * 1.57f) * 5f);
-            }
-
             // Player spawn
             var playerPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(W1_PlayerPrefabBuilder.PREFAB_PATH);
             GameObject playerInstance = null;

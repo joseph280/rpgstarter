@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Weapon_SwordShield
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Sword & Shield
-  mainPrefab: {fileID: 5586984829278751478, guid: d66aac248c52842e2afacc49889d5f54, type: 3}
+  mainPrefab: {fileID: 5125025871247343410, guid: d66aac248c52842e2afacc49889d5f54, type: 3}
   mainHand: 18
   mainLocalPos: {x: -0.034, y: 0.028, z: -0.348}
   mainLocalEuler: {x: 346.8564, y: 0.000032001066, z: 89.99998}
   mainLocalScale: {x: 1, y: 1, z: 1}
-  offHandPrefab: {fileID: 1745832196937460366, guid: 86def2d399d374a7c81ea19096eb21de, type: 3}
+  offHandPrefab: {fileID: 4875133623765924880, guid: 86def2d399d374a7c81ea19096eb21de, type: 3}
   offHand: 17
   offHandLocalPos: {x: 0.133, y: 0.116, z: -0.093}
   offHandLocalEuler: {x: 23.073418, y: -0.00008645929, z: 179.99994}

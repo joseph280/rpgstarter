@@ -87,14 +87,12 @@ namespace RPGStarter.EditorTools
         public  const int INVENTORY_HOTBAR_START = 40;
         public  const int INVENTORY_HOTBAR_SIZE  = 10;
 
-        // Ordered weapon list. Order = inventory slot priority for the starting roster.
-        // Each entry: weapon SO path, item SO path, icon file name (under ICON_DIR_TOOLS).
+        // Demo roster: only the items whose primitive / real-mesh visuals look
+        // credible in-hand. Bow / Axe / Mace / Spear were dropped — their cube-and-
+        // stick primitives didn't read as weapons. Sword + Shield uses real .fbx
+        // assets, the three tools have recognisable handle + head shapes.
         private static readonly (string weaponPath, string itemPath, string iconFile, string display)[] WEAPON_ITEMS =
         {
-            ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Bow.asset",         DIR_ITEMS + "/Item_Weapon_Bow.asset",         "Bow.png",          "Bow"),
-            ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Axe.asset",         DIR_ITEMS + "/Item_Weapon_Axe.asset",         "Axe.png",          "Axe"),
-            ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Mace.asset",        DIR_ITEMS + "/Item_Weapon_Mace.asset",        "Hammer.png",       "Mace"),
-            ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Spear.asset",       DIR_ITEMS + "/Item_Weapon_Spear.asset",       "Wooden Staff.png", "Spear"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_SwordShield.asset", DIR_ITEMS + "/Item_Weapon_SwordShield.asset", "Iron Sword.png",   "Sword & Shield"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Hammer.asset",      DIR_ITEMS + "/Item_Weapon_Hammer.asset",      "Hammer.png",       "Hammer"),
             ("Assets/_Project/ScriptableObjects/Weapons/Weapon_Pickaxe.asset",     DIR_ITEMS + "/Item_Weapon_Pickaxe.asset",     "Pickaxe.png",      "Pickaxe"),

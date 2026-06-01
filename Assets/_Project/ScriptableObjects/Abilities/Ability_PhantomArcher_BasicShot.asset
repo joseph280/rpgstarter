@@ -24,6 +24,8 @@ MonoBehaviour:
   faceAimOnCast: 1
   aimYawOffset: 90
   movementSlowFactor: 1
-  projectilePrefab: {fileID: 8533179798061762408, guid: 75168582952cb4bf5a73758695ef2490, type: 3}
+  projectilePrefab: {fileID: 6991261617133285639, guid: 75168582952cb4bf5a73758695ef2490, type: 3}
   sfxOnCast: {fileID: 0}
   vfxOnCast: {fileID: 0}
+  placedPrefab: {fileID: 0}
+  consumeOnPlace: {fileID: 0}

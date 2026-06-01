@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_AxeTool
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Axe (Tool)
-  mainPrefab: {fileID: 1878273237308662, guid: 0031543705b8c024c916caa648809017, type: 3}
+  mainPrefab: {fileID: 544873112243305064, guid: 3dce292c24eb3451e92e3471ca5fcae8, type: 3}
   mainHand: 18
   mainLocalPos: {x: -0.021, y: 0.121, z: 0.006}
   mainLocalEuler: {x: 332.62283, y: 116.54428, z: 270}

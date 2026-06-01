@@ -27,6 +27,6 @@ MonoBehaviour:
   deathDuration: 2.5
   resistTypes: []
   resistMultipliers: []
-  prefab: {fileID: 2845389921180263132, guid: 364ece9afd5614f8f9e459c50c7b9845, type: 3}
+  prefab: {fileID: 3226326024544277291, guid: 364ece9afd5614f8f9e459c50c7b9845, type: 3}
   hitSound: {fileID: 0}
   deathSound: {fileID: 0}

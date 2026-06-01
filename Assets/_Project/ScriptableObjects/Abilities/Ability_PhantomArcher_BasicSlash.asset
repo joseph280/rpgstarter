@@ -28,3 +28,5 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   sfxOnCast: {fileID: 0}
   vfxOnCast: {fileID: 0}
+  placedPrefab: {fileID: 0}
+  consumeOnPlace: {fileID: 0}
