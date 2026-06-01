@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
-  m_Name: Weapon_AxeTool
+  m_Name: Weapon_Bow
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
-  displayName: Axe (Tool)
-  mainPrefab: {fileID: 2314897520400004451, guid: 3dce292c24eb3451e92e3471ca5fcae8, type: 3}
-  mainHand: 18
-  mainLocalPos: {x: -0.021, y: 0.121, z: 0.006}
-  mainLocalEuler: {x: 332.62283, y: 116.54428, z: 270}
+  displayName: Bow
+  mainPrefab: {fileID: 8411996729740273069, guid: a35d5eebfd7cb45239e37390a33e1141, type: 3}
+  mainHand: 17
+  mainLocalPos: {x: 0, y: 0.05, z: 0.02}
+  mainLocalEuler: {x: -90, y: 90, z: 0}
   mainLocalScale: {x: 0.5, y: 0.5, z: 0.5}
   offHandPrefab: {fileID: 0}
   offHand: 17
   offHandLocalPos: {x: 0, y: 0, z: 0}
   offHandLocalEuler: {x: 0, y: 0, z: 0}
   offHandLocalScale: {x: 1, y: 1, z: 1}
-  attackClip: {fileID: -203655887218126122, guid: 29cdbc2e645a0432c897318851cb3998, type: 3}
-  ability: {fileID: 11400000, guid: 3c07f55aa524b42bf8c229b452bc5aaa, type: 2}
-  toolKind: {fileID: 11400000, guid: 4f2558593f5e24c90ae91e1aeef4b6b0, type: 2}
+  attackClip: {fileID: -203655887218126122, guid: b5497925add764ea9b8053435f3113b9, type: 3}
+  ability: {fileID: 11400000, guid: 8fd664686329449c0bdbc39bc285479a, type: 2}
+  toolKind: {fileID: 0}

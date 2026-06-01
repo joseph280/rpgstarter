@@ -27,5 +27,5 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   sfxOnCast: {fileID: 0}
   vfxOnCast: {fileID: 0}
-  placedPrefab: {fileID: 8176781995018040249, guid: 4f8695258f5404859a20a0d953a97156, type: 3}
+  placedPrefab: {fileID: 5268589268040634506, guid: 4f8695258f5404859a20a0d953a97156, type: 3}
   consumeOnPlace: {fileID: 11400000, guid: 2da41f733595f490ca46c97cc68e02eb, type: 2}

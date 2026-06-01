@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -90,6 +91,14 @@ namespace RPGStarter.EditorTools
 
                 Step(n, total, "Scatter harvest nodes (rocks + trees)");
                 ScatterHarvestNodes();
+
+                // Land the editor on Bootstrap — the playable entry point that holds the
+                // GameManager + inventory/crafting UI (the harvest/strip steps above leave the
+                // TEST scene open, which has no HUD). Also pin it as the Play-mode start scene
+                // so pressing Play boots Bootstrap no matter which scene is open afterward —
+                // kills the recurring "played the wrong scene, no inventory" confusion.
+                Step(n, total, "Open Bootstrap + set it as the Play-mode start scene");
+                OpenBootstrapAsStartScene();
             }
             finally
             {
@@ -98,9 +107,32 @@ namespace RPGStarter.EditorTools
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-            Debug.Log("[Build] END. Open Bootstrap.unity → Play. " +
-                      "Phantom Archer spawns with the full RPG stack — movement, combat, " +
-                      "inventory (I), hotbar (1-0), tree chopping, rock mining, crafting.");
+            Debug.Log("[Build] END. Bootstrap.unity is open and set as the Play start scene — " +
+                      "just press Play. Phantom Archer spawns with the full RPG stack — movement, " +
+                      "combat, inventory (I) with item icons, hotbar (1-0), tree chopping, rock " +
+                      "mining, crafting.");
+        }
+
+        /// <summary>
+        /// Opens Bootstrap.unity and pins it as <see cref="EditorSceneManager.playModeStartScene"/>
+        /// so Play always boots the entry scene (with the inventory/crafting HUD), regardless of
+        /// which scene the user has open in the editor.
+        /// </summary>
+        private static void OpenBootstrapAsStartScene()
+        {
+            string boot = W1_SceneBuilder.BOOTSTRAP_PATH;
+            if (!File.Exists(boot))
+            {
+                Debug.LogWarning($"[Build] {boot} not found — can't open/pin it. Run W1 scene build first.");
+                return;
+            }
+            EditorSceneManager.OpenScene(boot, OpenSceneMode.Single);
+            var bootAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(boot);
+            if (bootAsset != null)
+            {
+                EditorSceneManager.playModeStartScene = bootAsset;
+                Debug.Log("[Build] Bootstrap.unity opened + set as Play-mode start scene.");
+            }
         }
 
         private static void Step(int n, int total, string what)

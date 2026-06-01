@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_CraftingTable
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Crafting Table (Held)
-  mainPrefab: {fileID: 9056752604328085262, guid: 9a5b20edd16274d12af70181db29181d, type: 3}
+  mainPrefab: {fileID: 8809653802029455388, guid: 9a5b20edd16274d12af70181db29181d, type: 3}
   mainHand: 18
   mainLocalPos: {x: 0, y: 0.05, z: 0.02}
   mainLocalEuler: {x: 0, y: 0, z: 0}

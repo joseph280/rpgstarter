@@ -13,9 +13,26 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
-  m_GUID: cc960d041cbbd4000b9b89b4c981c7d2
-  m_SerializeEntries: []
+  m_GUID: 50d522cbdb1da472a95d8d410b8a240a
+  m_SerializeEntries:
+  - m_GUID: 472ef473b7683405982429557f039cc6
+    m_Address: Test_PlayerMovement
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70b02a29fcded4fdeb45ec2894e18c6c
+    m_Address: Bootstrap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a11e623dd7ea74372b5f19c62b95c017
+    m_Address: Test_PhantomArcher_Shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 28a7cb3dbd9c84fa99619c20e96c2c37, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 0c0321dba2211448995bf8cddf616cdb, type: 2}
+    - {fileID: 11400000, guid: 2fdfb36f3e6554a1cb9fc988bd9614c5, type: 2}

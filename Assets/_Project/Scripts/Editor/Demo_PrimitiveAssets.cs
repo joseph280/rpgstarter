@@ -55,6 +55,7 @@ namespace RPGStarter.EditorTools
             var leaves = Mat("M_Demo_Leaves", new Color(0.22f, 0.45f, 0.18f));
             var wood   = Mat("M_Demo_Wood",   new Color(0.55f, 0.38f, 0.20f));
             var metal  = Mat("M_Demo_Metal",  new Color(0.40f, 0.42f, 0.48f));
+            var bstring = Mat("M_Demo_String", new Color(0.86f, 0.84f, 0.78f));
 
             // ── Rock: a squashed sphere ─────────────────────────────────────
             BuildSingle(SRC_ROCK, "Demo_Src_Rock", PrimitiveType.Sphere,
@@ -70,8 +71,14 @@ namespace RPGStarter.EditorTools
             // ── Weapons (W2) — bow + the three placeholder melee weapons ─────
             // The demo only really uses the bow; axe/mace/spear are built by
             // W2_WeaponBuilder regardless, so they get primitives too.
-            BuildSingle(SRC_BOW,   "Demo_Src_Bow",   PrimitiveType.Cube,
-                        new Vector3(0.08f, 1.1f, 0.18f), Vector3.zero, wood);
+            //
+            // The bow is a multi-primitive root (curved stave + grip + string) —
+            // NOT a single scaled cube. WeaponEquipment overwrites the equipped
+            // prop's ROOT localScale with the SO's uniform mainLocalScale, so any
+            // shape baked into the root scale (as the old single cube did) gets
+            // flattened back into a box. Carrying the silhouette on child
+            // transforms — like BuildTree/BuildTool — survives that uniform scale.
+            BuildBow(wood, bark, bstring);
             BuildSingle(SRC_AXE1H, "Demo_Src_Axe1H", PrimitiveType.Cube,
                         new Vector3(0.10f, 0.9f, 0.10f), Vector3.zero, metal);
             BuildSingle(SRC_MACE,  "Demo_Src_Mace",  PrimitiveType.Cube,
@@ -174,7 +181,72 @@ namespace RPGStarter.EditorTools
             finally { Object.DestroyImmediate(root); }
         }
 
+        private static void BuildBow(Material wood, Material grip, Material stringMat)
+        {
+            if (AssetDatabase.LoadAssetAtPath<GameObject>(SRC_BOW) != null)
+                AssetDatabase.DeleteAsset(SRC_BOW);
+
+            var root = new GameObject("Demo_Src_Bow");
+            try
+            {
+                const float halfH = 0.55f;  // bow reaches ±0.55m along local Y (a "D" stave)
+                const float depth = 0.20f;  // how far the stave bellies out on -Z
+                const int   segs  = 8;      // straight rods approximating the curved stave
+
+                // Parabolic stave: z(t) = -depth*(1-t²) for t∈[-1,1]. Flat string side
+                // sits at z=0; the limbs bow out to -Z and the nocks meet the string
+                // exactly at the tips (z=0 when t=±1).
+                Vector3 Arc(float t) => new Vector3(0f, t * halfH, -depth * (1f - t * t));
+
+                for (int i = 0; i < segs; i++)
+                {
+                    float t0 = Mathf.Lerp(-1f, 1f, i       / (float)segs);
+                    float t1 = Mathf.Lerp(-1f, 1f, (i + 1) / (float)segs);
+                    AddRod(root.transform, "Stave_" + i, Arc(t0), Arc(t1), 0.05f, wood);
+                }
+
+                // Leather grip — a short, fatter band over the belly centre.
+                var handle = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                StripCollider(handle);
+                handle.name = "Grip";
+                handle.transform.SetParent(root.transform, false);
+                handle.transform.localPosition = new Vector3(0f, 0f, -depth);
+                handle.transform.localScale    = new Vector3(0.07f, 0.12f, 0.07f);
+                handle.GetComponent<MeshRenderer>().sharedMaterial = grip;
+
+                // Bowstring — a thin straight line down the flat side, nock to nock.
+                AddRod(root.transform, "String",
+                       new Vector3(0f, -halfH, 0f), new Vector3(0f, halfH, 0f),
+                       0.012f, stringMat);
+
+                PrefabUtility.SaveAsPrefabAsset(root, SRC_BOW);
+            }
+            finally { Object.DestroyImmediate(root); }
+        }
+
         // ── Helpers ──────────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Adds a thin cylinder "rod" spanning local points <paramref name="a"/>→<paramref name="b"/>.
+        /// Unity's cylinder primitive is 2 units tall along local Y, so Y-scale = length/2 and
+        /// the rod is rotated to align its Y axis with the segment direction.
+        /// </summary>
+        private static void AddRod(Transform parent, string name, Vector3 a, Vector3 b,
+                                   float thickness, Material mat)
+        {
+            var rod = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            StripCollider(rod);
+            rod.name = name;
+            rod.transform.SetParent(parent, false);
+
+            Vector3 dir = b - a;
+            float len = dir.magnitude;
+            rod.transform.localPosition = (a + b) * 0.5f;
+            rod.transform.localScale    = new Vector3(thickness, len * 0.5f, thickness);
+            if (len > 1e-5f)
+                rod.transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir / len);
+            rod.GetComponent<MeshRenderer>().sharedMaterial = mat;
+        }
 
         private static Material Mat(string name, Color color)
         {

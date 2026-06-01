@@ -17,27 +17,18 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: dbdcbf78f5d32454182c2ba9789f192d, type: 2}
     count: 1
     slotIndex: 40
-  - item: {fileID: 11400000, guid: aa42997c3b72444fcb0d36e561c339dd, type: 2}
-    count: 1
-    slotIndex: 41
-  - item: {fileID: 11400000, guid: df4a249a0bb6748b1bfbe42a2f174f73, type: 2}
-    count: 1
-    slotIndex: 42
-  - item: {fileID: 11400000, guid: 435e7dbb6f78947639e38b4bd7b86ef4, type: 2}
-    count: 1
-    slotIndex: 43
   - item: {fileID: 11400000, guid: 0deae39ff3b2b44148d7d0369d68f9bf, type: 2}
     count: 1
-    slotIndex: 44
+    slotIndex: 41
   - item: {fileID: 11400000, guid: e2148b8c419f640648ffde4306697a64, type: 2}
     count: 1
-    slotIndex: 45
+    slotIndex: 42
   - item: {fileID: 11400000, guid: 0cb8de8bc51904ce8a62a429a4a5aba5, type: 2}
     count: 1
-    slotIndex: 46
+    slotIndex: 43
   - item: {fileID: 11400000, guid: a4aa0083c1f634a8f87b3719280f4c53, type: 2}
     count: 1
-    slotIndex: 47
+    slotIndex: 44
   - item: {fileID: 11400000, guid: 4d21b463e898546e78511b7d61f3b35c, type: 2}
     count: 10
     slotIndex: -1

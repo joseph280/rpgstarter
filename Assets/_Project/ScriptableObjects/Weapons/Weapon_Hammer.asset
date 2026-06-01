@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_Hammer
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Hammer
-  mainPrefab: {fileID: 8595176528368266386, guid: 889dd1626fade415db0d0938b015092f, type: 3}
+  mainPrefab: {fileID: 8017751558346067799, guid: 889dd1626fade415db0d0938b015092f, type: 3}
   mainHand: 18
   mainLocalPos: {x: -0.053, y: 0.104, z: -0.063}
   mainLocalEuler: {x: 20.25028, y: 305.57965, z: 90.00006}

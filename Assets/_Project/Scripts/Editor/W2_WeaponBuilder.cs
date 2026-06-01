@@ -30,9 +30,10 @@ namespace RPGStarter.EditorTools
         private const string PATH_SHOT_AB  = DIR_ABILITY  + "/Ability_PhantomArcher_BasicShot.asset";
         private const string PATH_DMG_PHYS = DIR_DAMAGE   + "/DamageType_Physical.asset";
 
-        // Bow visual = Demo_PrimitiveAssets' thin tall cube. Reads as a stick more
-        // than a bow but the gameplay function (BasicShot ability → pooled arrow)
-        // works against any visual.
+        // Bow visual = Demo_PrimitiveAssets' multi-primitive bow (curved stave +
+        // grip + string), built so its silhouette lives on child transforms and
+        // survives WeaponEquipment's uniform root-scale override on equip. The
+        // gameplay function (BasicShot ability → pooled arrow) is visual-agnostic.
         private const string PREFAB_BOW    = Demo_PrimitiveAssets.SRC_BOW;
 
         // Sword + shield are in _Project/Art/Weapons. Wrapper prefabs are generated
@@ -57,8 +58,8 @@ namespace RPGStarter.EditorTools
         private static readonly Vector3 RIGHTHAND_EULER = new(90f, -90f, 0f);
         private static readonly Vector3 RIGHTHAND_SCALE = new(0.5f, 0.5f, 0.5f);
 
-        // Bow grip — LeftHand. Tip-up orientation so the primitive cube reads as a
-        // vertical bow stave.
+        // Bow grip — LeftHand. Tip-up orientation so the stave stands vertical in
+        // the hand (first-run default; tune in the Inspector once in-engine).
         private static readonly Vector3 LEFTHAND_BOW_POS   = new(0f, 0.05f, 0.02f);
         private static readonly Vector3 LEFTHAND_BOW_EULER = new(-90f, 90f, 0f);
         private static readonly Vector3 LEFTHAND_BOW_SCALE = new(0.5f, 0.5f, 0.5f);

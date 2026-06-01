@@ -799,8 +799,16 @@ namespace RPGStarter.EditorTools
         private static GameObject BuildInventorySlotViewPrefab()
         {
             EnsureDir(Path.GetDirectoryName(PREFAB_INV_SLOT));
-            if (AssetDatabase.LoadAssetAtPath<GameObject>(PREFAB_INV_SLOT) != null)
-                AssetDatabase.DeleteAsset(PREFAB_INV_SLOT);
+
+            // IDEMPOTENT: if the prefab already exists, KEEP it as-is. Re-generating it
+            // (DeleteAsset + SaveAsPrefabAsset) assigns brand-new internal fileIDs every run,
+            // which silently breaks the Bootstrap scene's serialized references to this prefab
+            // (InventoryHUD.slotViewPrefab + every baked slot instance) → slotViewPrefab resolves
+            // null at runtime → BuildSlotViews bails → no inventory grid/hotbar slots, no icons.
+            // Keeping the existing asset preserves those fileIDs so the scene wiring stays valid.
+            // To intentionally regenerate the slot visual, delete the .prefab and re-run.
+            var existing = AssetDatabase.LoadAssetAtPath<GameObject>(PREFAB_INV_SLOT);
+            if (existing != null) return existing;
 
             var go = new GameObject("InventorySlotView", typeof(RectTransform));
             try

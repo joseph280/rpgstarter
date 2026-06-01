@@ -127,7 +127,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823588851}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: CraftInput_2
       objectReference: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
   panel: {fileID: 1801799954}
   slotsContainer: {fileID: 394081662}
   hotbarContainer: {fileID: 784580259}
-  slotViewPrefab: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+  slotViewPrefab: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
   craftingBarSection: {fileID: 1823588849}
   hotbarStartIndex: 40
   hotbarSize: 10
@@ -924,7 +924,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_1
       objectReference: {fileID: 0}
@@ -1158,7 +1158,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_7
       objectReference: {fileID: 0}
@@ -1622,7 +1622,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_0
       objectReference: {fileID: 0}
@@ -1835,7 +1835,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823588851}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: CraftInput_3
       objectReference: {fileID: 0}
@@ -1948,7 +1948,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_5
       objectReference: {fileID: 0}
@@ -2061,7 +2061,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823588851}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: CraftInput_0
       objectReference: {fileID: 0}
@@ -2174,7 +2174,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_6
       objectReference: {fileID: 0}
@@ -2468,7 +2468,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 662485843}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableOutput
       objectReference: {fileID: 0}
@@ -2766,7 +2766,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823588851}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: CraftOutput
       objectReference: {fileID: 0}
@@ -3016,7 +3016,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_8
       objectReference: {fileID: 0}
@@ -3271,7 +3271,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823588851}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: CraftInput_1
       objectReference: {fileID: 0}
@@ -3764,7 +3764,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_2
       objectReference: {fileID: 0}
@@ -4156,7 +4156,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_3
       objectReference: {fileID: 0}
@@ -4269,7 +4269,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 541092441}
     m_Modifications:
-    - target: {fileID: 672480103684220042, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
+    - target: {fileID: 4516717493772763573, guid: 729e6d5e1cdbe4a5f913f1f1272c2470, type: 3}
       propertyPath: m_Name
       value: TableInput_4
       objectReference: {fileID: 0}

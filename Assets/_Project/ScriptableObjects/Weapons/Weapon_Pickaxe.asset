@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_Pickaxe
   m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Pickaxe
-  mainPrefab: {fileID: 7643819726925824670, guid: b917734975248419daa867fe7e58fd01, type: 3}
+  mainPrefab: {fileID: 6388114709841815928, guid: b917734975248419daa867fe7e58fd01, type: 3}
   mainHand: 18
   mainLocalPos: {x: -0.018, y: 0.128, z: -0.015}
   mainLocalEuler: {x: 28.784775, y: 305.3514, z: 90.00002}
