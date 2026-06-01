@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c2840717ec1b4dbfb06de4ed03d0078, type: 3}
   m_Name: Item_Weapon_Hammer
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.ItemDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.ItemDefinitionSO
   displayName: Hammer
   description: Equippable weapon.
   icon: {fileID: 21300000, guid: abf1a6dfdf9e945f2bd4475883f24d95, type: 3}

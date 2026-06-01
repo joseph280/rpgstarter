@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2001ed57b3144fd291b6a1555ce936d, type: 3}
   m_Name: Class_PhantomArcher
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.ClassDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.ClassDefinitionSO
   displayName: Phantom Archer
   description: Ranged glass cannon. Cloak + bow. Dodge-heavy. Subclass branch TBD.
   maxHealth: 100

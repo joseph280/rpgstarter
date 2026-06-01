@@ -1,8 +1,8 @@
-using Celestia.Core.Audio;
-using Celestia.Core.SceneManagement;
+using RPGStarter.Core.Audio;
+using RPGStarter.Core.SceneManagement;
 using UnityEngine;
 
-namespace Celestia.Core
+namespace RPGStarter.Core
 {
     /// <summary>
     /// The single approved singleton (CLAUDE.md §5, §9). Lives in the Bootstrap scene,

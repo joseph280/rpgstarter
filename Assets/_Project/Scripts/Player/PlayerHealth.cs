@@ -1,9 +1,9 @@
-using Celestia.Combat;
-using Celestia.Core.Events;
-using Celestia.Data;
+using RPGStarter.Combat;
+using RPGStarter.Core.Events;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Foundation health component. W1 scope: track HP, raise SO event channels on

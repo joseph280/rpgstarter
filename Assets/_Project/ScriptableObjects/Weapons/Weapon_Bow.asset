@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
   m_Name: Weapon_Bow
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Bow
   mainPrefab: {fileID: 1198998981114754527, guid: d0c32318984847e428ac1bce4ea19377, type: 3}
   mainHand: 17

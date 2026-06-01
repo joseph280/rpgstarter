@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09920fdfa6f0244f0b42649a232376e4, type: 3}
   m_Name: ToolKind_Hammer
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.ToolKindSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.ToolKindSO
   displayName: Hammer
   description: 'Heavy crushing blows. Future use: smith stations.'

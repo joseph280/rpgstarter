@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc87d80f51e446c7a333be153460b69, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.World.RockMineable
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.World.RockMineable
   requiredToolKind: {fileID: 11400000, guid: 4f2558593f5e24c90ae91e1aeef4b6b0, type: 2}
   hitsToBreak: 5
   dropItem: {fileID: 11400000, guid: 4d21b463e898546e78511b7d61f3b35c, type: 2}

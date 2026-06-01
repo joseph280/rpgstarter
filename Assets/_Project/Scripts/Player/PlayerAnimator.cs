@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Bridges PlayerMovement state into Animator parameters. Keeps gameplay code

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3fc56609c9a2485885ae2571a6bb271, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.World.RockChipBurst
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.World.RockChipBurst
   chunkMesh: {fileID: 4300018, guid: 8314f526bc5cf614eaeb6f104c8f34c8, type: 3}
   chunkMaterial: {fileID: 2100000, guid: 9416b49b954cfde40914e794994121de, type: 2}
   chunkCount: 4

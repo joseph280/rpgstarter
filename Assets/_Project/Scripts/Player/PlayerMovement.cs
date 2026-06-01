@@ -1,7 +1,7 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Camera-relative isometric WASD movement + dodge dash.

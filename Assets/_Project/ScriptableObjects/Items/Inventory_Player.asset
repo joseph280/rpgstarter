@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d40ec6bca2a4381b862b1bf7d91569, type: 3}
   m_Name: Inventory_Player
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.InventorySO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.InventorySO
   capacity: 50
   startingItems:
   - item: {fileID: 11400000, guid: dbdcbf78f5d32454182c2ba9789f192d, type: 2}

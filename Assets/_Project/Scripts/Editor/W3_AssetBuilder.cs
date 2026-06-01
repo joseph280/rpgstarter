@@ -1,13 +1,13 @@
 using System.IO;
 using System.Linq;
-using Celestia.Data;
-using Celestia.UI;
-using Celestia.World;
+using RPGStarter.Data;
+using RPGStarter.UI;
+using RPGStarter.World;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// W3 mining-system assets — counterpart to <see cref="W2_AssetBuilder"/> for combat:
@@ -129,7 +129,7 @@ namespace Celestia.EditorTools
         // "stale compiled DLL ran an old menu" issues from the Console alone.
         private const string BUILDER_VERSION = "v11 (branch-falling tree hits, no break-burst, brown stump)";
 
-        [MenuItem("Celestia/W3/1 - Build Mining Assets")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             Debug.Log($"[W3_AssetBuilder] BEGIN — {BUILDER_VERSION}");
@@ -233,7 +233,7 @@ namespace Celestia.EditorTools
                 if (weaponSO == null)
                 {
                     Debug.LogWarning($"[W3_AssetBuilder] Weapon SO missing at {entry.weaponPath} — skipping its item asset. " +
-                                     "Run Celestia/W2/5 (and W3/2 for tools) first.");
+                                     "Run RPGStarter/W2/5 (and W3/2 for tools) first.");
                     continue;
                 }
                 var weaponItem = LoadOrCreate<ItemDefinitionSO>(entry.itemPath, _ => { });
@@ -333,7 +333,7 @@ namespace Celestia.EditorTools
                 VerifyAssetExists(System.IO.Path.GetFileNameWithoutExtension(entry.itemPath), entry.itemPath);
             Debug.Log($"[W3_AssetBuilder] END — {BUILDER_VERSION}. " +
                       "If Item_Wood / chip-burst rows say MISSING you're running a stale compiled DLL — " +
-                      "switch to Unity, wait for 'Compiling…' to finish, then re-run Celestia/W3/Build Everything.");
+                      "switch to Unity, wait for 'Compiling…' to finish, then re-run RPGStarter/W3/Build Everything.");
         }
 
         private static void VerifyAssetExists(string label, string path)

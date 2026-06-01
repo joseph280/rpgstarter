@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Celestia.Core.Events
+namespace RPGStarter.Core.Events
 {
     /// <summary>
     /// SO event channel with no payload. Systems publish via Raise() and listeners
@@ -9,7 +9,7 @@ namespace Celestia.Core.Events
     /// Per CLAUDE.md §4: SOs never mutate runtime state — the OnRaised event is fine because
     /// it's a C# delegate field, not serialized.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Events/Void Event Channel", fileName = "Event_VoidNew")]
+    [CreateAssetMenu(menuName = "RPGStarter/Events/Void Event Channel", fileName = "Event_VoidNew")]
     public sealed class VoidEventChannelSO : ScriptableObject
     {
         [TextArea(2, 5), SerializeField]

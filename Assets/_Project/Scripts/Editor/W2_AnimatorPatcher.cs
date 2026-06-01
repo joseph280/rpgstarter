@@ -4,14 +4,14 @@ using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Adds a single weapon-neutral "Attack" state to AC_PhantomArcher on a dedicated
     /// "UpperBody" layer with a humanoid avatar mask. The mask blocks legs + root, so
     /// the Attack clip drives the spine/arms/head while the base layer keeps Locomotion
     /// running on the legs. The clip itself is HOT-SWAPPED at runtime by
-    /// <see cref="Celestia.Player.WeaponEquipment"/> via AnimatorOverrideController, so
+    /// <see cref="RPGStarter.Player.WeaponEquipment"/> via AnimatorOverrideController, so
     /// the same state plays a sword slash, an axe swing, a bow recoil, etc., depending
     /// on which weapon is currently equipped.
     ///
@@ -30,13 +30,13 @@ namespace Celestia.EditorTools
         private const string UPPER_BODY_LAYER_NAME   = "UpperBody";
         public  const string ATTACK_STATE_NAME       = "Attack";
 
-        [MenuItem("Celestia/W2/2 - Patch AnimatorController (Attack state)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Patch()
         {
             var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(W1_AnimatorBuilder.CONTROLLER_PATH);
             if (controller == null)
             {
-                Debug.LogError($"[W2_AnimatorPatcher] {W1_AnimatorBuilder.CONTROLLER_PATH} missing. Run Celestia/W1/2 first.");
+                Debug.LogError($"[W2_AnimatorPatcher] {W1_AnimatorBuilder.CONTROLLER_PATH} missing. Run RPGStarter/W1/2 first.");
                 return;
             }
 

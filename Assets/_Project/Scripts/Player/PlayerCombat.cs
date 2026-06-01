@@ -1,13 +1,13 @@
 using System.Collections;
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.UI;
-using Celestia.World;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.UI;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Glue between input → AbilityCaster → animation + damage. Sits on the player root.

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c2840717ec1b4dbfb06de4ed03d0078, type: 3}
   m_Name: Item_CraftingTable
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.ItemDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.ItemDefinitionSO
   displayName: Crafting Table
   description: A wooden bench. Place it down to craft larger structures.
   icon: {fileID: 21300000, guid: 24e2b45e99a6c491f93fa7b06a7976e6, type: 3}

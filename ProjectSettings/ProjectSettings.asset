@@ -844,14 +844,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Celestia
+  metroPackageName: RPGStarter
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Celestia
+  metroApplicationDescription: RPGStarter
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -926,7 +926,7 @@ PlayerSettings:
   cloudProjectId: 56071f64-1598-499a-b879-de1fd1f86def
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Celestia
+  projectName: RPGStarter
   organizationId: josephaguilar28
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

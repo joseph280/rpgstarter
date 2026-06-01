@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.Player;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.Player;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Adds runtime combat components to PhantomArcher_Player.prefab:
@@ -38,7 +38,7 @@ namespace Celestia.EditorTools
             "Assets/_Project/ScriptableObjects/Weapons/Weapon_SwordShield.asset",
         };
 
-        [MenuItem("Celestia/W2/3 - Patch Player Prefab (combat components)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Patch()
         {
             var prefabPath  = W1_PlayerPrefabBuilder.PREFAB_PATH;
@@ -46,7 +46,7 @@ namespace Celestia.EditorTools
             var arrowPrefab = AssetDatabase.LoadAssetAtPath<Projectile>(W2_AssetBuilder.PREFAB_ARROW);
             if (classSO == null || arrowPrefab == null)
             {
-                Debug.LogError("[W2_PlayerPrefabPatcher] Run Celestia/W2/1 first (creates the arrow + class wiring).");
+                Debug.LogError("[W2_PlayerPrefabPatcher] Run RPGStarter/W2/1 first (creates the arrow + class wiring).");
                 return;
             }
 
@@ -91,7 +91,7 @@ namespace Celestia.EditorTools
 
             var w2Weapons = LoadWeapons();
             if (w2Weapons.Count == 0)
-                Debug.LogError("[W2_PlayerPrefabPatcher] No WeaponDefinitionSO assets found. Run Celestia/W2/5 first.");
+                Debug.LogError("[W2_PlayerPrefabPatcher] No WeaponDefinitionSO assets found. Run RPGStarter/W2/5 first.");
 
             // Preserve any extras already on the roster (e.g. W3 tool weapons appended by
             // W3_PlayerPrefabPatcher). Without this merge a re-run of W2 nukes the W3 slots
@@ -106,7 +106,7 @@ namespace Celestia.EditorTools
 
             var placeholderClip = W2_AnimatorPatcher.LoadFirstClip(W2_AnimatorPatcher.CLIP_ATTACK_PLACEHOLDER);
             if (placeholderClip == null)
-                Debug.LogError("[W2_PlayerPrefabPatcher] Attack placeholder clip not found. Run Celestia/W2/2 first.");
+                Debug.LogError("[W2_PlayerPrefabPatcher] Attack placeholder clip not found. Run RPGStarter/W2/2 first.");
             SetSerialized(equipment, "attackPlaceholderClip", placeholderClip);
 
             // Over-head health bar (proper HUD lands in W7).

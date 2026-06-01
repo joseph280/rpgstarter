@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
   m_Name: Weapon_Mace
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Mace
   mainPrefab: {fileID: 1854720754721900251, guid: cd129f656ecb0a543aba3aec71bf1158, type: 3}
   mainHand: 18

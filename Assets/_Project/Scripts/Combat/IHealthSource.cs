@@ -1,4 +1,4 @@
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Read-only view onto whatever component owns a health pool. Lets UI (e.g.,

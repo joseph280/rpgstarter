@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.World
+namespace RPGStarter.World
 {
     /// <summary>
     /// One-shot chip burst: spawns N small mesh fragments with a rigidbody, applies an

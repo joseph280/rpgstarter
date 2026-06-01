@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b910650d32369454bab6321715ba4870, type: 3}
   m_Name: Enemy_TargetDummy
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.EnemyDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.EnemyDefinitionSO
   displayName: Target Dummy
   description: Stationary practice target. No AI.
   maxHealth: 60

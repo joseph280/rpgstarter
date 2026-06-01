@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 035b3a91ba8ee432cb2f5efebee29bac, type: 3}
   m_Name: Event_PlayerHealthChanged01
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Core.Events.FloatEventChannelSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Core.Events.FloatEventChannelSO
   description: 

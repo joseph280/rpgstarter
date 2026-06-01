@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Wraps UnityEngine.Pool.ObjectPool&lt;T&gt; for a specific Projectile prefab.

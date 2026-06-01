@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Definition of a stackable inventory item (e.g. Rock, Wood, or a weapon facing).
@@ -11,7 +11,7 @@ namespace Celestia.Data
     /// can show the player's weapon roster in the same grid as materials, and so future
     /// "click to equip" work has a hook ready.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Item", fileName = "Item_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Item", fileName = "Item_New")]
     public sealed class ItemDefinitionSO : ScriptableObject
     {
         [Header("Identity")]

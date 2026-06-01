@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfcde232182a444d78bb8f5eb062e18b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.DamageNumber
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.DamageNumber
   tmp: {fileID: 2275948216707888411}
   lifetime: 0.9
   floatSpeed: 1.5

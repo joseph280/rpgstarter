@@ -1,8 +1,8 @@
-using Celestia.Combat;
+using RPGStarter.Combat;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// Owns the DamageNumber pool and listens for damage events on every DamageReceiver

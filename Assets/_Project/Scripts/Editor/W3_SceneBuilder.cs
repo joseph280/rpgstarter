@@ -1,5 +1,5 @@
-using Celestia.Data;
-using Celestia.UI;
+using RPGStarter.Data;
+using RPGStarter.UI;
 using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// W3 scene patches:
@@ -53,7 +53,7 @@ namespace Celestia.EditorTools
             { MinX = minX; MaxX = maxX; MinZ = minZ; MaxZ = maxZ; }
         }
 
-        [MenuItem("Celestia/W3/4 - Patch Scenes (rocks + spawner + HUD)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Patch()
         {
             Debug.Log("[W3_SceneBuilder] BEGIN — patching Test_PlayerMovement.unity + Bootstrap.unity.");
@@ -72,11 +72,11 @@ namespace Celestia.EditorTools
             var treePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(W3_AssetBuilder.PREFAB_TREE_NODE);
             if (rockPrefab == null)
             {
-                Debug.LogError("[W3_SceneBuilder] Rock_Mineable prefab missing. Run Celestia/W3/1 first.");
+                Debug.LogError("[W3_SceneBuilder] Rock_Mineable prefab missing. Run RPGStarter/W3/1 first.");
                 return;
             }
             if (treePrefab == null)
-                Debug.LogWarning("[W3_SceneBuilder] Tree_Choppable prefab missing — skipping trees. Re-run Celestia/W3/1 once it's built.");
+                Debug.LogWarning("[W3_SceneBuilder] Tree_Choppable prefab missing — skipping trees. Re-run RPGStarter/W3/1 once it's built.");
 
             var scene = EditorSceneManager.OpenScene(W1_SceneBuilder.TEST_PATH, OpenSceneMode.Single);
 
@@ -132,7 +132,7 @@ namespace Celestia.EditorTools
                 root.transform.localScale = new Vector3(scale, 1f, scale);
                 return;
             }
-            Debug.LogWarning("[W3_SceneBuilder] No 'Floor' root in test scene — skipping resize. Run Celestia/W1/4 first.");
+            Debug.LogWarning("[W3_SceneBuilder] No 'Floor' root in test scene — skipping resize. Run RPGStarter/W1/4 first.");
         }
 
         private static int ScatterNodes(GameObject prefab, Transform parent, Bounds2D area, int count,
@@ -191,7 +191,7 @@ namespace Celestia.EditorTools
             {
                 Debug.LogError("[W3_SceneBuilder] OpenScene returned an invalid Scene — Bootstrap.unity wasn't loaded. " +
                                "If Unity prompted to save unsaved Bootstrap changes and you cancelled, the open is aborted. " +
-                               "Save or discard manually, then re-run Celestia/W3/4.");
+                               "Save or discard manually, then re-run RPGStarter/W3/4.");
                 return;
             }
 
@@ -200,7 +200,7 @@ namespace Celestia.EditorTools
                 if (root.name == "GameManager") { gm = root; break; }
             if (gm == null)
             {
-                Debug.LogError("[W3_SceneBuilder] GameManager root not found in Bootstrap.unity. Run Celestia/W1/4 first.");
+                Debug.LogError("[W3_SceneBuilder] GameManager root not found in Bootstrap.unity. Run RPGStarter/W1/4 first.");
                 return;
             }
 
@@ -249,7 +249,7 @@ namespace Celestia.EditorTools
             if (slotPrefab == null)
             {
                 Debug.LogError($"[W3_SceneBuilder] InventorySlotView prefab missing at {W3_AssetBuilder.PREFAB_INV_SLOT}. " +
-                               "Run Celestia/W3/1 first.");
+                               "Run RPGStarter/W3/1 first.");
                 return;
             }
 
@@ -456,7 +456,7 @@ namespace Celestia.EditorTools
             if (inventoryProp != null && inventoryProp.objectReferenceValue == null && inventory != null)
             {
                 Debug.LogError("[W3_SceneBuilder] InventoryHUD.inventory wouldn't accept the InventorySO ref — " +
-                               "almost certainly a STALE compiled DLL. Switch to Unity, wait for compile, re-run Celestia/W3/Build Everything.");
+                               "almost certainly a STALE compiled DLL. Switch to Unity, wait for compile, re-run RPGStarter/W3/Build Everything.");
             }
             else
             {

@@ -1,8 +1,8 @@
-using Celestia.Combat;
+using RPGStarter.Combat;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// World-space billboard health bar. Sits above a character, tracks its IHealthSource,

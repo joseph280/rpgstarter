@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
   m_Name: Weapon_Pickaxe
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Pickaxe
   mainPrefab: {fileID: 1392316285209212, guid: 869385138ceeb3c4e9ed5f72da8d50d7, type: 3}
   mainHand: 18

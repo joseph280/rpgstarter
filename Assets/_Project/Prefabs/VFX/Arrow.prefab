@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e24fbbef0e324d6eb082545e9e61e16, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.Projectile
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.Projectile
   damageType: {fileID: 11400000, guid: 7b67e63752a8346d98f946d1c0d95ab3, type: 2}
   speed: 25
   lifetime: 4

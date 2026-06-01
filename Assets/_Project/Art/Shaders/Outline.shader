@@ -1,4 +1,4 @@
-Shader "Celestia/PostProcess/Outline"
+Shader "RPGStarter/PostProcess/Outline"
 {
     Properties
     {
@@ -73,7 +73,7 @@ Shader "Celestia/PostProcess/Outline"
 
         Pass
         {
-            Name "CelestiaOutline"
+            Name "RPGStarterOutline"
             HLSLPROGRAM
             #pragma vertex   Vert
             #pragma fragment Frag

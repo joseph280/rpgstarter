@@ -1,14 +1,14 @@
 using System.IO;
 using System.Linq;
-using Celestia.Core.Events;
-using Celestia.Data;
-using Celestia.Player;
+using RPGStarter.Core.Events;
+using RPGStarter.Data;
+using RPGStarter.Player;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Builds Assets/_Project/Prefabs/Characters/PhantomArcher_Player.prefab
@@ -54,7 +54,7 @@ namespace Celestia.EditorTools
         /// </summary>
         public static bool ForceMannequinVisual = false;
 
-        [MenuItem("Celestia/W1/3 - Build Player Prefab")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             var classSO       = AssetDatabase.LoadAssetAtPath<ClassDefinitionSO>(W1_AssetBuilder.CLASS_PATH);
@@ -66,7 +66,7 @@ namespace Celestia.EditorTools
             if (classSO == null || controller == null || inputAsset == null)
             {
                 Debug.LogError("[W1_PlayerPrefabBuilder] Run steps 1 and 2 first " +
-                    "(Celestia/W1/1 - Build Assets, Celestia/W1/2 - Build AnimatorController). Also confirm PlayerInput.inputactions exists.");
+                    "(RPGStarter/W1/1 - Build Assets, RPGStarter/W1/2 - Build AnimatorController). Also confirm PlayerInput.inputactions exists.");
                 return;
             }
 

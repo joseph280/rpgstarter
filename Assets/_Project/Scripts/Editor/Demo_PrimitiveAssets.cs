@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Generates Unity-primitive "source" prefabs that stand in for the licensed
@@ -16,11 +16,11 @@ namespace Celestia.EditorTools
     /// their source-path constants at the primitive prefabs this script creates.
     ///
     /// Run order on the demo branch:
-    ///   1. Celestia → Demo → 1. Build Primitive Source Assets   (this script)
-    ///   2. Celestia → W1 → Build Everything
-    ///   3. Celestia → W2 → Build Everything
-    ///   4. Celestia → W3 → Build Everything
-    ///   5. Celestia → Demo → Build Mannequin Player
+    ///   1. RPGStarter → Demo → 1. Build Primitive Source Assets   (this script)
+    ///   2. RPGStarter → W1 → Build Everything
+    ///   3. RPGStarter → W2 → Build Everything
+    ///   4. RPGStarter → W3 → Build Everything
+    ///   5. RPGStarter → Demo → Build Mannequin Player
     ///
     /// Everything here is Unity-primitive geometry + flat URP/Lit colours — zero
     /// third-party content, fully redistributable.
@@ -42,7 +42,7 @@ namespace Celestia.EditorTools
         public const string SRC_PICKAXE = DIR_PREFABS + "/Demo_Src_Pickaxe.prefab";
         public const string SRC_AXETOOL = DIR_PREFABS + "/Demo_Src_AxeTool.prefab";
 
-        [MenuItem("Celestia/Demo/1. Build Primitive Source Assets", priority = 0)]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             Debug.Log("[Demo_PrimitiveAssets] BEGIN");

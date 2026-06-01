@@ -1,8 +1,8 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Pooled projectile. Each tick raycasts from previous to current position so

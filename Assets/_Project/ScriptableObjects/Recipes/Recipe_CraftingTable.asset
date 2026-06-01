@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7d69c3acf2364bbeb4b600614ff6390, type: 3}
   m_Name: Recipe_CraftingTable
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.RecipeSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.RecipeSO
   displayName: Crafting Table
   description: Lash four wood together into a workbench.
   inputs:

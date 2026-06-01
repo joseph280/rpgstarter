@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 019e16386bce94453832dc1702610d1e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.RewardPopup
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.RewardPopup
   tmp: {fileID: 6062951697702755847}
   lifetime: 1.4
   floatSpeed: 1.2

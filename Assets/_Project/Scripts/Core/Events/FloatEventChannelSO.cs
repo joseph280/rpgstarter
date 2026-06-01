@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-namespace Celestia.Core.Events
+namespace RPGStarter.Core.Events
 {
     /// <summary>
     /// SO event channel carrying a float. Used for normalized signals (HP fraction,
     /// stamina, ability cooldown progress).
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Events/Float Event Channel", fileName = "Event_FloatNew")]
+    [CreateAssetMenu(menuName = "RPGStarter/Events/Float Event Channel", fileName = "Event_FloatNew")]
     public sealed class FloatEventChannelSO : ScriptableObject
     {
         [TextArea(2, 5), SerializeField]

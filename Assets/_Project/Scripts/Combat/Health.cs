@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Generic health pool. Used by both player and enemies via composition

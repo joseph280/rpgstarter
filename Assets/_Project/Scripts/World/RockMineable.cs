@@ -1,10 +1,10 @@
 using System;
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.Player;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.Player;
 using UnityEngine;
 
-namespace Celestia.World
+namespace RPGStarter.World
 {
     /// <summary>
     /// Breakable rock node. Implements <see cref="IDamageable"/> directly so the
@@ -117,7 +117,7 @@ namespace Celestia.World
             if (_hitsTaken < hitsToBreak && hitChipPrefab != null)
                 Instantiate(hitChipPrefab, msg.HitPoint, Quaternion.identity);
             else if (_hitsTaken < hitsToBreak && hitChipPrefab == null && verboseLogging)
-                Debug.LogWarning($"[RockMineable] {name}: hitChipPrefab not assigned — re-run Celestia/W3/1.");
+                Debug.LogWarning($"[RockMineable] {name}: hitChipPrefab not assigned — re-run RPGStarter/W3/1.");
 
             if (_hitsTaken >= hitsToBreak) Break();
         }
@@ -151,7 +151,7 @@ namespace Celestia.World
             if (breakDebrisPrefab != null)
                 Instantiate(breakDebrisPrefab, pos + Vector3.up * breakDebrisHeight, Quaternion.identity);
             else if (verboseLogging)
-                Debug.LogWarning($"[RockMineable] {name}: breakDebrisPrefab not assigned — re-run Celestia/W3/1.");
+                Debug.LogWarning($"[RockMineable] {name}: breakDebrisPrefab not assigned — re-run RPGStarter/W3/1.");
 
             // Leftover stump / rubble piece — sits at the node's base so the world reads
             // "something used to be here". Random yaw so identical residuals don't tile.
@@ -170,12 +170,12 @@ namespace Celestia.World
         {
             if (pickupPrefab == null)
             {
-                if (verboseLogging) Debug.LogWarning($"[RockMineable] {name}: pickupPrefab not assigned — nothing to absorb. Re-run Celestia/W3/1.");
+                if (verboseLogging) Debug.LogWarning($"[RockMineable] {name}: pickupPrefab not assigned — nothing to absorb. Re-run RPGStarter/W3/1.");
                 return;
             }
             if (dropItem == null)
             {
-                if (verboseLogging) Debug.LogWarning($"[RockMineable] {name}: dropItem not assigned — pickup will carry no item. Re-run Celestia/W3/1.");
+                if (verboseLogging) Debug.LogWarning($"[RockMineable] {name}: dropItem not assigned — pickup will carry no item. Re-run RPGStarter/W3/1.");
                 return;
             }
 

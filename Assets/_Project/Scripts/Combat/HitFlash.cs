@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Flashes a target's renderers a color for a brief moment via MaterialPropertyBlock.

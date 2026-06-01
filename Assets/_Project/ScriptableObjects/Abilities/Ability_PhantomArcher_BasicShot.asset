@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25b44767d733d46c5a97a2d8aa08d421, type: 3}
   m_Name: Ability_PhantomArcher_BasicShot
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.AbilityDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.AbilityDefinitionSO
   displayName: Quick Shot
   description: Phantom Archer's basic bow attack. Snap-fire arrow at the cursor.
   damage: 12

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Builds AC_PhantomArcher.controller wired to Mixamo clips from W0 imports.
@@ -33,7 +33,7 @@ namespace Celestia.EditorTools
         private const string CLIP_HIT   = DIR + "standing react small from front.fbx";
         private const string CLIP_DIE   = DIR + "standing death backward 01.fbx";
 
-        [MenuItem("Celestia/W1/2 - Build AnimatorController")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             // Pass 1: reconfigure each Mixamo source FBX (Humanoid + per-FBX avatar + loops).

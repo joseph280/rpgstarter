@@ -1,9 +1,9 @@
-using Celestia.Data;
-using Celestia.World;
+using RPGStarter.Data;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// Crafting bar above the inventory grid: 4 input slots → arrow → 1 output slot

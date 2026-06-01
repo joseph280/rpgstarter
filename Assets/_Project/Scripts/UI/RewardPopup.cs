@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// World-space "+N" popup floating above a broken rock. Same lifecycle shape as

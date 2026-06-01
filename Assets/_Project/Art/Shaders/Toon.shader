@@ -1,4 +1,4 @@
-Shader "Celestia/Character/Toon"
+Shader "RPGStarter/Character/Toon"
 {
     Properties
     {

@@ -4,7 +4,7 @@ using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Scans _Project/Scenes/** and _Project/Tests/PlayMode/** for .unity files and
@@ -62,7 +62,7 @@ namespace Celestia.EditorTools
         /// Wipes Assets/AddressableAssetsData/, lets Unity recreate defaults via
         /// GetSettings(create: true), then re-registers the scene entries.
         /// </summary>
-        [MenuItem("Celestia/Build/Repair Addressables (nuke + rebuild)", priority = 51)]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Repair()
         {
             const string ADDR_DIR = "Assets/AddressableAssetsData";
@@ -104,7 +104,7 @@ namespace Celestia.EditorTools
             "Assets/_Project/Tests/PlayMode"
         };
 
-        [MenuItem("Celestia/Build/Sync Addressables (scenes)", priority = 50)]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Sync()
         {
             var settings = AddressableAssetSettingsDefaultObject.Settings

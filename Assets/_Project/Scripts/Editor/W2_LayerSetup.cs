@@ -1,10 +1,10 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
-    /// Adds Celestia gameplay layers to the project + configures the physics
+    /// Adds RPGStarter gameplay layers to the project + configures the physics
     /// collision matrix so projectiles only interact with intended layers.
     ///
     /// Idempotent — safe to re-run.
@@ -27,7 +27,7 @@ namespace Celestia.EditorTools
             (LAYER_ENVIRONMENT,       "Environment"),
         };
 
-        [MenuItem("Celestia/W2/0 - Configure Layers + Physics")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Configure()
         {
             EnsureLayerNames();

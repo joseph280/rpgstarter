@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// One crafting recipe: a multiset of <see cref="Ingredient"/>s in → one
@@ -13,7 +13,7 @@ namespace Celestia.Data
     /// (a list of nullable items) and returns true if their per-type histogram equals
     /// the recipe's required histogram.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Recipe", fileName = "Recipe_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Recipe", fileName = "Recipe_New")]
     public sealed class RecipeSO : ScriptableObject
     {
         [Serializable]

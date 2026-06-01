@@ -1,9 +1,9 @@
-using Celestia.World;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// Unified crafting screen for placed crafting tables. The table's own canvas contains

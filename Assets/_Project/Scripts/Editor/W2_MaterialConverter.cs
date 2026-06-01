@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Quick-fix: convert third-party Built-in pipeline materials to URP equivalents.
@@ -30,7 +30,7 @@ namespace Celestia.EditorTools
             "Diffuse",
         };
 
-        [MenuItem("Celestia/Build/Convert ThirdParty Materials to URP")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void ConvertThirdPartyMaterials()
         {
             var urpLit = Shader.Find("Universal Render Pipeline/Lit");

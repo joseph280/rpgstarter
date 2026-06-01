@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd71ce46ae95640a7a403a90094f9ec0, type: 3}
   m_Name: Event_PlayerDied
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Core.Events.VoidEventChannelSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Core.Events.VoidEventChannelSO
   description: 

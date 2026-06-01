@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Tag-like SO marking a weapon as a particular kind of tool (Pickaxe, Hammer, Axe, …).
@@ -8,7 +8,7 @@ namespace Celestia.Data
     /// tool kinds without code changes — and so other systems (RockMineable, future Lumber
     /// nodes, etc.) can reference them by asset.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Tool Kind", fileName = "ToolKind_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Tool Kind", fileName = "ToolKind_New")]
     public sealed class ToolKindSO : ScriptableObject
     {
         [Header("Identity")]

@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e93f47903006e48bdbc908fb12a64e3c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.Health
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.Health
   max: 80
   initial: -1
 --- !u!114 &3962594803457892154
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e817cc705351748c3a3e7a0bc1a7e861, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.DamageReceiver
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.DamageReceiver
 --- !u!114 &3333567080392631870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f41322052a4174b029205fb2828fa641, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.Hitbox
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.Hitbox
   allegiance: 1
   isActive: 1
   receiver: {fileID: 0}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3708c419fb272482ab16522e86e1a4ba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.HitFlash
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.HitFlash
   flashColor: {r: 1, g: 0.3, b: 0.3, a: 1}
   duration: 0.12
   renderers: []
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e296285090cca47a49ea9594ee07b88f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Enemies.MonsterAI
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Enemies.MonsterAI
   definition: {fileID: 11400000, guid: ba12f454082d446cd99618165025725f, type: 2}
   animator: {fileID: 5003395161652316612}
   hitFlash: {fileID: 2643143856220609973}
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103e212fa3e5d4eee88511961a0ed921, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.WorldHealthBar
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.WorldHealthBar
   healthSource: {fileID: 6911382374579405765}
   fill: {fileID: 4132866932422544000}
   hideWhenFull: 0

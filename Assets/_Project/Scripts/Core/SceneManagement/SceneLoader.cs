@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-namespace Celestia.Core.SceneManagement
+namespace RPGStarter.Core.SceneManagement
 {
     /// <summary>
     /// Loads/unloads scenes via Addressables, additively on top of Bootstrap (CLAUDE.md §9).

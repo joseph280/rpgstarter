@@ -1,10 +1,10 @@
 using System;
-using Celestia.Data;
+using RPGStarter.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// One cell in the inventory or crafting grid. Bound by <see cref="InventoryHUD"/> /

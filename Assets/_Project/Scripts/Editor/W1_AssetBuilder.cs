@@ -1,10 +1,10 @@
 using System.IO;
-using Celestia.Core.Events;
-using Celestia.Data;
+using RPGStarter.Core.Events;
+using RPGStarter.Data;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Creates the SO instances + materials needed by the W1 player setup. Idempotent.
@@ -18,7 +18,7 @@ namespace Celestia.EditorTools
         public const string OUTLINE_SHADER_PATH = "Assets/_Project/Art/Shaders/Outline.shader";
         public const string TOON_SHADER_PATH    = "Assets/_Project/Art/Shaders/Toon.shader";
 
-        [MenuItem("Celestia/W1/1 - Build Assets (SOs + materials)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void BuildAssets()
         {
             var classSO = LoadOrCreate<ClassDefinitionSO>(CLASS_PATH, c =>

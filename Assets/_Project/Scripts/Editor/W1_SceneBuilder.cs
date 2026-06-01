@@ -1,14 +1,14 @@
 using System.IO;
-using Celestia.Core;
-using Celestia.Core.Audio;
-using Celestia.Core.SceneManagement;
+using RPGStarter.Core;
+using RPGStarter.Core.Audio;
+using RPGStarter.Core.SceneManagement;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Cinemachine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Builds the two W1 scenes:
@@ -24,7 +24,7 @@ namespace Celestia.EditorTools
 
         private const string FLOOR_MAT_PATH = "Assets/_Project/Art/Materials/M_TestFloor.mat";
 
-        [MenuItem("Celestia/W1/4 - Build Scenes (Bootstrap + Test)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             BuildBootstrap();
@@ -131,7 +131,7 @@ namespace Celestia.EditorTools
                 follow.TrackerSettings = tracker;
 
                 // Tell the player movement which transform is the camera reference (for camera-relative WASD).
-                var movement = playerInstance.GetComponent<Celestia.Player.PlayerMovement>();
+                var movement = playerInstance.GetComponent<RPGStarter.Player.PlayerMovement>();
                 if (movement != null) SetSerialized(movement, "cameraReference", virtCamGo.transform);
             }
 

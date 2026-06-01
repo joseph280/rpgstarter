@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Receiving-side collider tagged with an allegiance and pointing at a DamageReceiver.

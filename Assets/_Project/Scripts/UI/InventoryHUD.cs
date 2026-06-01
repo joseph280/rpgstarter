@@ -1,9 +1,9 @@
-using Celestia.Data;
-using Celestia.World;
+using RPGStarter.Data;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// 40-slot inventory grid HUD, toggled with the <c>I</c> key. Builds slot views from
@@ -103,7 +103,7 @@ namespace Celestia.UI
 
             if (panel == null)
             {
-                Debug.LogError("[InventoryHUD] I pressed but no panel bound — re-run Celestia/W3/4.");
+                Debug.LogError("[InventoryHUD] I pressed but no panel bound — re-run RPGStarter/W3/4.");
                 return;
             }
 

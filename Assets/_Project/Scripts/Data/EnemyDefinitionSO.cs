@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Per CLAUDE.md §4: enemy stats are SOs. Resistances by damage type, base HP,
@@ -9,7 +9,7 @@ namespace Celestia.Data
     /// Resistance map: simple parallel arrays. For MVP we won't have many damage
     /// types, so arrays beat dictionaries (no GC, easier to author in Inspector).
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Enemy", fileName = "Enemy_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Enemy", fileName = "Enemy_New")]
     public sealed class EnemyDefinitionSO : ScriptableObject
     {
         [Header("Identity")]

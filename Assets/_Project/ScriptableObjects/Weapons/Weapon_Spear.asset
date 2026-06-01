@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
   m_Name: Weapon_Spear
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Spear
   mainPrefab: {fileID: 1207145758441076341, guid: c8f328ffdc9cd3646ab8b4c340edbbba, type: 3}
   mainHand: 18

@@ -1,15 +1,15 @@
 using System.IO;
 using System.Linq;
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.Enemies;
-using Celestia.Player;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.Enemies;
+using RPGStarter.Player;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// W2 monster scaffolding — uses the imported base_monster_1.fbx (humanoid) as a
@@ -47,7 +47,7 @@ namespace Celestia.EditorTools
         // Built-in/Standard materials that URP can't draw.
         private const string FALLBACK_MAT_PATH = "Assets/_Project/Art/Materials/M_Monster1.mat";
 
-        [MenuItem("Celestia/W2/6 - Build Monster1 (asset + prefab + scene)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             EnsureFbxIsHumanoid(MONSTER_FBX, requireValid: true);

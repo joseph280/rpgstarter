@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// World-space damage number. Spawned + positioned + colored by DamageNumberSpawner,

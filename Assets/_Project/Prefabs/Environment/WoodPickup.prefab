@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e83a0c7ff30114850a3c7ea76e4c0bcf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.World.ItemPickup
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.World.ItemPickup
   item: {fileID: 11400000, guid: 4d21b463e898546e78511b7d61f3b35c, type: 2}
   amount: 1
   pickupRadius: 1.4

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Bridges DamageMessage → Health. Implements IDamageable so attackers don't need

@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf3cd84f3361040ed954be02b7bb1709, type: 3}
   m_Name: OutlineRendererFeature
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Rendering.OutlineRendererFeature
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Rendering.OutlineRendererFeature
   m_Active: 1
   settings:
     shader: {fileID: 4800000, guid: c89328525fe0c4e20bf6b63444cddda4, type: 3}

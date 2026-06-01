@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Celestia.Core.Audio
+namespace RPGStarter.Core.Audio
 {
     /// <summary>
     /// Owns the AudioMixer and exposes volume controls. Lives on the Bootstrap scene's

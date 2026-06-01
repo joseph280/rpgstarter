@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02783d3b9ea9a41e0a6af85016d02713, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerInputReader
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerInputReader
   inputAsset: {fileID: -944628639613478452, guid: f3c2f1f08d044437e986a9dbf544f796, type: 3}
   actionMapName: Gameplay
 --- !u!114 &8670335864376245084
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98b626dc6c0a142bd9e66e144ea11e8d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerMovement
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerMovement
   input: {fileID: 1808565965959493783}
   classDefinition: {fileID: 11400000, guid: eb0d980f6aa44488ab7c81afde7d78fc, type: 2}
   cameraReference: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73fc0d69724d24c248e70020189270f8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerAnimator
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerAnimator
   animator: {fileID: 7442170313761808698}
   speedDamping: 0.1
 --- !u!114 &4583045978420658173
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bc0b711cc33a42b999cf6239946a783, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerHealth
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerHealth
   classDefinition: {fileID: 11400000, guid: eb0d980f6aa44488ab7c81afde7d78fc, type: 2}
   onHealthChanged01: {fileID: 11400000, guid: 70e85272cad57495197d6125fa98c554, type: 2}
   onDied: {fileID: 11400000, guid: 524f2c13e81cb4b16b5320cfaff5f0ca, type: 2}
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b518bbc2cfec84cc4b7421f6386d0f17, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.AbilityCaster
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.AbilityCaster
   classDefinition: {fileID: 11400000, guid: eb0d980f6aa44488ab7c81afde7d78fc, type: 2}
 --- !u!114 &7434235933052831042
 MonoBehaviour:
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03795531d8a774b61a1c94cc99085251, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Combat.ProjectilePool
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Combat.ProjectilePool
   prefab: {fileID: 7957031944469785927, guid: 75168582952cb4bf5a73758695ef2490, type: 3}
   defaultCapacity: 16
   maxSize: 64
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fe737bdbfff74d5097cf7e77c278a80, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerCombat
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerCombat
   input: {fileID: 1808565965959493783}
   animator: {fileID: 7442170313761808698}
   arrowPool: {fileID: 7434235933052831042}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc09d80199af44a51ad20be3aa329af8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.WeaponEquipment
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.WeaponEquipment
   animator: {fileID: 7442170313761808698}
   caster: {fileID: 1250727599581557371}
   weapons:
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c6c77d0602fd4cc99dfb182ae1931b3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.World.Inventory
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.World.Inventory
   inventory: {fileID: 11400000, guid: 41b40966753a649929b778b7bd0685a6, type: 2}
 --- !u!114 &2237563524309657323
 MonoBehaviour:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75f3c5e4c2984439b89d3050c08d38d0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.PlayerInteract
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.PlayerInteract
   interactKey: 19
   searchRadius: 3
 --- !u!114 &650277714405379540
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c0108fba72ce4da48fc4d3c87ac3b80, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Player.Hotbar
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Player.Hotbar
   inventory: {fileID: 11400000, guid: 41b40966753a649929b778b7bd0685a6, type: 2}
   equipment: {fileID: 2989404459671485333}
   hud: {fileID: 0}
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103e212fa3e5d4eee88511961a0ed921, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.WorldHealthBar
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.WorldHealthBar
   healthSource: {fileID: 4583045978420658173}
   fill: {fileID: 3404723261398482532}
   hideWhenFull: 0

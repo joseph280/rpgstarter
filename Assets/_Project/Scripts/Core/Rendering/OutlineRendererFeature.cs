@@ -4,16 +4,16 @@ using UnityEngine.Rendering.RenderGraphModule;
 using UnityEngine.Rendering.RenderGraphModule.Util;
 using UnityEngine.Rendering.Universal;
 
-namespace Celestia.Rendering
+namespace RPGStarter.Rendering
 {
     /// <summary>
     /// URP renderer feature that draws a Sobel outline over the scene using
     /// scene depth + normals. Add this to the URP Renderer Data asset's
     /// Renderer Features list (Settings/URP/PC_Renderer.asset).
     ///
-    /// Pair with the Celestia/PostProcess/Outline shader.
+    /// Pair with the RPGStarter/PostProcess/Outline shader.
     /// </summary>
-    [DisallowMultipleRendererFeature("Celestia Outline")]
+    [DisallowMultipleRendererFeature("RPGStarter Outline")]
     public sealed class OutlineRendererFeature : ScriptableRendererFeature
     {
         [System.Serializable]
@@ -94,7 +94,7 @@ namespace Celestia.Rendering
             {
                 _material = material;
                 _settings = settings;
-                profilingSampler = new ProfilingSampler("Celestia Outline");
+                profilingSampler = new ProfilingSampler("RPGStarter Outline");
             }
 
             public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData)
@@ -107,12 +107,12 @@ namespace Celestia.Rendering
                 var resourceData = frameData.Get<UniversalResourceData>();
                 var source       = resourceData.activeColorTexture;
                 var destDesc     = renderGraph.GetTextureDesc(source);
-                destDesc.name    = "_CelestiaOutlineTemp";
+                destDesc.name    = "_RPGStarterOutlineTemp";
                 destDesc.clearBuffer = false;
                 var dest         = renderGraph.CreateTexture(destDesc);
 
                 var blitParams   = new RenderGraphUtils.BlitMaterialParameters(source, dest, _material, 0);
-                renderGraph.AddBlitPass(blitParams, "Celestia Outline Blit");
+                renderGraph.AddBlitPass(blitParams, "RPGStarter Outline Blit");
 
                 resourceData.cameraColor = dest;
             }

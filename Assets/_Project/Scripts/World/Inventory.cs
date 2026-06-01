@@ -1,7 +1,7 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.World
+namespace RPGStarter.World
 {
     /// <summary>
     /// Player-side handle on an <see cref="InventorySO"/>. The SO holds the (runtime-only)

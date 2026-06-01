@@ -1,8 +1,8 @@
-using Celestia.Combat;
-using Celestia.Data;
+using RPGStarter.Combat;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.Enemies
+namespace RPGStarter.Enemies
 {
     /// <summary>
     /// Passive enemy used for combat testing. No AI — just stands there, takes damage,

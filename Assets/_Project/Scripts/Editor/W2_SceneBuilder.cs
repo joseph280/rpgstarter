@@ -1,10 +1,10 @@
-using Celestia.UI;
+using RPGStarter.UI;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Adds W2 combat content to the existing scenes:
@@ -16,7 +16,7 @@ namespace Celestia.EditorTools
     /// </summary>
     public static class W2_SceneBuilder
     {
-        [MenuItem("Celestia/W2/4 - Patch Scenes (dummies + spawner)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Patch()
         {
             PatchTestScene();
@@ -29,7 +29,7 @@ namespace Celestia.EditorTools
             var dummyPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(W2_AssetBuilder.PREFAB_DUMMY);
             if (dummyPrefab == null)
             {
-                Debug.LogError("[W2_SceneBuilder] TargetDummy prefab missing. Run Celestia/W2/1 first.");
+                Debug.LogError("[W2_SceneBuilder] TargetDummy prefab missing. Run RPGStarter/W2/1 first.");
                 return;
             }
 
@@ -63,7 +63,7 @@ namespace Celestia.EditorTools
             var spawnerPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(W2_AssetBuilder.PREFAB_DAMAGE_NUMBER);
             if (spawnerPrefab == null)
             {
-                Debug.LogError("[W2_SceneBuilder] DamageNumber prefab missing. Run Celestia/W2/1 first.");
+                Debug.LogError("[W2_SceneBuilder] DamageNumber prefab missing. Run RPGStarter/W2/1 first.");
                 return;
             }
 
@@ -76,7 +76,7 @@ namespace Celestia.EditorTools
             }
             if (gm == null)
             {
-                Debug.LogError("[W2_SceneBuilder] GameManager root not found in Bootstrap.unity. Run Celestia/W1/4 first.");
+                Debug.LogError("[W2_SceneBuilder] GameManager root not found in Bootstrap.unity. Run RPGStarter/W1/4 first.");
                 return;
             }
 

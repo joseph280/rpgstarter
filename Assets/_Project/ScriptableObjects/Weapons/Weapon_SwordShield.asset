@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c552131f1e6491b9c59da0e94149e0, type: 3}
   m_Name: Weapon_SwordShield
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Data.WeaponDefinitionSO
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Data.WeaponDefinitionSO
   displayName: Sword & Shield
   mainPrefab: {fileID: 5586984829278751478, guid: d66aac248c52842e2afacc49889d5f54, type: 3}
   mainHand: 18

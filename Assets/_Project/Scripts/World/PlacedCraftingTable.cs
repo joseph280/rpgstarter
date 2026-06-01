@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Celestia.World
+namespace RPGStarter.World
 {
     /// <summary>
     /// In-world crafting table the player has dropped via the place-ability path. Owns

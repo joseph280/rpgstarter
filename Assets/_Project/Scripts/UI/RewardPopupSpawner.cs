@@ -1,8 +1,8 @@
-using Celestia.World;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Celestia.UI
+namespace RPGStarter.UI
 {
     /// <summary>
     /// One per scene (lives on Bootstrap GameManager). Subscribes to

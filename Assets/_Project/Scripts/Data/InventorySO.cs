@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Slot-based inventory store. <paramref name="capacity"/> slots, each slot holds at
@@ -11,7 +11,7 @@ namespace Celestia.Data
     /// Per CLAUDE.md §4 the SO doesn't persist runtime state — slots and event listeners
     /// live in [NonSerialized] fields and reset on every domain reload via OnEnable.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Inventory", fileName = "Inventory_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Inventory", fileName = "Inventory_New")]
     public sealed class InventorySO : ScriptableObject
     {
         [Serializable]

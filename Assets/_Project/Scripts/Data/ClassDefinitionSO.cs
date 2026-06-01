@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Per CLAUDE.md §4: data is data. All tunable class stats live here.
@@ -8,7 +8,7 @@ namespace Celestia.Data
     /// MVP scope: Phantom Archer is the sole class. Subclasses unlock at level 125
     /// (post-MVP, MVP cap is 20). No branch indirection.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Class", fileName = "Class_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Class", fileName = "Class_New")]
     public sealed class ClassDefinitionSO : ScriptableObject
     {
         [Header("Identity")]

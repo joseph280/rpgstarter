@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Reads the PlayerInput action asset and surfaces its values as plain C# events

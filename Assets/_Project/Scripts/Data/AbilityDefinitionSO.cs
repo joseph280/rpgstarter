@@ -1,13 +1,13 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Data-only ability spec (CLAUDE.md §4). Cooldown ticks per runtime AbilityCaster
     /// instance — never on this asset. Animation is referenced by state-name hash, not
     /// by trigger, per CLAUDE.md §5 ("triggers desync — use Animator.Play").
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Ability", fileName = "Ability_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Ability", fileName = "Ability_New")]
     public sealed class AbilityDefinitionSO : ScriptableObject
     {
         [Header("Identity")]

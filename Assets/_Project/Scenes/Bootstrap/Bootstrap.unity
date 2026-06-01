@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &98650591
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71daa2d6aeb2d498f9747c9428fb062d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventoryHUD
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventoryHUD
   inventory: {fileID: 0}
   panel: {fileID: 1801799954}
   slotsContainer: {fileID: 394081662}
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e374e5c9ad464660b336e6f81216658, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.CraftingPanel
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.CraftingPanel
   inventory: {fileID: 0}
   inventoryHud: {fileID: 308525337}
   inputSlotViews:
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &541092440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 095e7c6ed44a34ee9940733bb835a7da, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.RewardPopupSpawner
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.RewardPopupSpawner
   prefab: {fileID: 582526305366164378, guid: fa9d6c7c3160041b98f36db235a95c2c, type: 3}
   defaultCapacity: 4
   maxSize: 16
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &651224567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e4b4f22edb5e459dac4939c834a41e3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.CraftingTableUI
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.CraftingTableUI
   panel: {fileID: 98650591}
   closeButton: {fileID: 1681159178}
   inventoryHud: {fileID: 308525337}
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e374e5c9ad464660b336e6f81216658, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.CraftingPanel
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.CraftingPanel
   inventory: {fileID: 0}
   inventoryHud: {fileID: 308525337}
   inputSlotViews:
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &784580258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1001 &837541474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1001 &859007506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1001 &960907257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &1048432072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e82d50e28b8f4f8aba23511ad15786a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Core.SceneManagement.SceneLoader
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Core.SceneManagement.SceneLoader
 --- !u!4 &1048432074
 Transform:
   m_ObjectHideFlags: 0
@@ -2572,7 +2572,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &1141219840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2601,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48c5bb7da17e441c5826e5143c586ef1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Core.Audio.AudioMixerController
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Core.Audio.AudioMixerController
   mixer: {fileID: 0}
   masterParam: MasterVolume
   musicParam: MusicVolume
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &1378848834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3120,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &1631742961
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &1681159176
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,7 +3540,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2be09d5cf55d45e6adb0766e9f8211c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.DamageNumberSpawner
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.DamageNumberSpawner
   prefab: {fileID: 7834329298170784057, guid: aa68982d7a331404991fb8a9582de0ab, type: 3}
   defaultCapacity: 16
   maxSize: 64
@@ -3730,7 +3730,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a60b700fbe8684c87ae6cf15af6c8576, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.Core.GameManager
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.Core.GameManager
   sceneLoader: {fileID: 1048432073}
   audioMixer: {fileID: 1141219841}
   firstSceneKey: Test_PlayerMovement
@@ -3868,7 +3868,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1 &2050017946
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,7 +4260,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1001 &2083120857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4373,7 +4373,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

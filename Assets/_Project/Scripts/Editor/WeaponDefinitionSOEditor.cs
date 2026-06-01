@@ -1,9 +1,9 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Custom inspector for WeaponDefinitionSO. Adds a live-preview workflow on top of
@@ -191,7 +191,7 @@ namespace Celestia.EditorTools
                 var asset = AssetDatabase.LoadAssetAtPath<GameObject>(W1_PlayerPrefabBuilder.PREFAB_PATH);
                 if (asset == null)
                 {
-                    Debug.LogError($"[WeaponPreview] Player prefab missing at {W1_PlayerPrefabBuilder.PREFAB_PATH}. Run Celestia/W1/3 first.");
+                    Debug.LogError($"[WeaponPreview] Player prefab missing at {W1_PlayerPrefabBuilder.PREFAB_PATH}. Run RPGStarter/W1/3 first.");
                     return null;
                 }
                 AssetDatabase.OpenAsset(asset);

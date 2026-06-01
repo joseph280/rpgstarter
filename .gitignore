@@ -1,5 +1,5 @@
 # =============================================================================
-# .gitignore — Celestia: The Convergence (Unity 6 + URP)
+# .gitignore — RPGStarter: The Convergence (Unity 6 + URP)
 # =============================================================================
 # Tells Git which files to NEVER track. Unity regenerates most of these on
 # project open; committing them creates merge conflicts and bloats the repo.

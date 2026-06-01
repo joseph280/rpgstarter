@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Owns the player's weapon roster + which one is currently equipped.
@@ -82,7 +82,7 @@ namespace Celestia.Player
 
         private void Update()
         {
-            // Digit-key equip moved to Celestia.Player.Hotbar so it can read from the
+            // Digit-key equip moved to RPGStarter.Player.Hotbar so it can read from the
             // inventory's hotbar row + obey item-driven linkedWeapons. Scroll-wheel cycle
             // stays here as a quick shortcut through the static roster.
             if (Mouse.current != null)

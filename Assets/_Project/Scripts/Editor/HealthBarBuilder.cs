@@ -1,9 +1,9 @@
-using Celestia.UI;
+using RPGStarter.UI;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Editor-time helper that adds a world-space health bar above a character root.

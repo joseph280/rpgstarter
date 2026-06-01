@@ -1,9 +1,9 @@
-using Celestia.UI;
-using Celestia.World;
+using RPGStarter.UI;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Listens for the interact key (default <c>E</c>) and triggers the nearest placed

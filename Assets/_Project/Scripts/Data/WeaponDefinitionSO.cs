@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// One equippable weapon. Per CLAUDE.md §4 — data is data.
@@ -14,7 +14,7 @@ namespace Celestia.Data
     ///     decides ranged vs. melee — non-null = spawn a projectile, null = overlap-sweep
     ///     in front of the player. No combat-mode enum needed.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Weapon", fileName = "Weapon_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Weapon", fileName = "Weapon_New")]
     public sealed class WeaponDefinitionSO : ScriptableObject
     {
         [Header("Identity")]

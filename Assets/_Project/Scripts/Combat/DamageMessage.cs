@@ -1,7 +1,7 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Value-type damage payload — passed by value from attacker to receiver.

@@ -4,7 +4,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// One-shot scene builder for the W0 Phantom Archer shader/character validation scene.
@@ -24,7 +24,7 @@ namespace Celestia.EditorTools
 
         private const string URP_LIT_SHADER  = "Universal Render Pipeline/Lit";
 
-        [MenuItem("Celestia/Build Test Scene/Phantom Archer")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             var urpLit = Shader.Find(URP_LIT_SHADER);

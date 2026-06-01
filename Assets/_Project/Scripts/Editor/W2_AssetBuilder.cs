@@ -1,18 +1,18 @@
 using System.IO;
 using System.Linq;
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.Enemies;
-using Celestia.UI;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.Enemies;
+using RPGStarter.UI;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Creates the W2 combat assets:
-    ///  - Damage type SOs (Physical, Celestia)
+    ///  - Damage type SOs (Physical, RPGStarter)
     ///  - Ability SO (Phantom Archer basic shot)
     ///  - Enemy SO (TargetDummy)
     ///  - Arrow prefab (Projectile component on a small cylinder)
@@ -26,7 +26,7 @@ namespace Celestia.EditorTools
     {
         // SOs
         public const string DT_PHYSICAL  = "Assets/_Project/ScriptableObjects/GameConfig/DamageType_Physical.asset";
-        public const string DT_CELESTIA  = "Assets/_Project/ScriptableObjects/GameConfig/DamageType_Celestia.asset";
+        public const string DT_CELESTIA  = "Assets/_Project/ScriptableObjects/GameConfig/DamageType_RPGStarter.asset";
         public const string ABILITY_BASIC = "Assets/_Project/ScriptableObjects/Abilities/Ability_PhantomArcher_BasicShot.asset";
         public const string ENEMY_DUMMY  = "Assets/_Project/ScriptableObjects/Enemies/Enemy_TargetDummy.asset";
 
@@ -39,7 +39,7 @@ namespace Celestia.EditorTools
         public const string MAT_ARROW = "Assets/_Project/Art/Materials/M_Arrow.mat";
         public const string MAT_DUMMY = "Assets/_Project/Art/Materials/M_TargetDummy.mat";
 
-        [MenuItem("Celestia/W2/1 - Build Combat Assets")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Build()
         {
             EnsureDir(Path.GetDirectoryName(DT_PHYSICAL));
@@ -57,7 +57,7 @@ namespace Celestia.EditorTools
             });
             LoadOrCreate<DamageTypeSO>(DT_CELESTIA, dt =>
             {
-                dt.displayName  = "Celestia";
+                dt.displayName  = "RPGStarter";
                 dt.description  = "Energy from the rift. Glows teal. Used by abilities (W3+).";
                 dt.displayColor = new Color(0.36f, 0.91f, 0.77f);
             });

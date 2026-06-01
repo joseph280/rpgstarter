@@ -10,7 +10,7 @@ A small Unity 6 ARPG starter kit built around a single editor menu that wires up
 - **Crafting** — 3×3 grid placeable crafting table, recipe matching
 - **Bootstrap → additive scene load** — `GameManager` + `SceneLoader` via Addressables
 
-Everything builds from a single menu — **`Celestia → Build → Build Everything`** (yes, the menu still says Celestia internally; rename `Celestia.EditorTools` to your own namespace if you want).
+Everything builds from a single menu — **`RPGStarter → Build → Build Everything`** (yes, the menu still says RPGStarter internally; rename `RPGStarter.EditorTools` to your own namespace if you want).
 
 ## Stack
 
@@ -26,8 +26,8 @@ git lfs install
 
 Open in Unity 6000.4+ and run:
 
-1. **`Celestia → Demo → 1. Build Primitive Source Assets`** — generates Unity-primitive stand-ins for rocks / trees / weapons / table
-2. **`Celestia → W1 → Build Everything`** through `W3 → Build Everything` in order (each is one click)
+1. **`RPGStarter → Demo → 1. Build Primitive Source Assets`** — generates Unity-primitive stand-ins for rocks / trees / weapons / table
+2. **`RPGStarter → W1 → Build Everything`** through `W3 → Build Everything` in order (each is one click)
 3. Open `Bootstrap.unity` → Play
 
 ## What's third-party

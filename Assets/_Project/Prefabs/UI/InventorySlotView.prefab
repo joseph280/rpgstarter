@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdef217f7f664b9db9a5f8766825eca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Celestia.UI.InventorySlotView
+  m_EditorClassIdentifier: Assembly-CSharp::RPGStarter.UI.InventorySlotView
   iconImage: {fileID: 9211084096109605702}
   countText: {fileID: 6081322792936959563}
   button: {fileID: 8474646701800120054}

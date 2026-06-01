@@ -1,7 +1,7 @@
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.World
+namespace RPGStarter.World
 {
     /// <summary>
     /// Bobbing, spinning world-space pickup. Carries a count, magnetises toward the

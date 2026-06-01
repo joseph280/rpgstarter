@@ -1,10 +1,10 @@
-using Celestia.Data;
-using Celestia.UI;
-using Celestia.World;
+using RPGStarter.Data;
+using RPGStarter.UI;
+using RPGStarter.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Bridges the inventory's hotbar row (last 10 slots by default) to the equipped weapon.

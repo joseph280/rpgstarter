@@ -1,8 +1,8 @@
 using System;
-using Celestia.Data;
+using RPGStarter.Data;
 using UnityEngine;
 
-namespace Celestia.Player
+namespace RPGStarter.Player
 {
     /// <summary>
     /// Owns slots 0-4 (slot 0 = basic attack, 1-4 = abilities). Tracks cooldowns

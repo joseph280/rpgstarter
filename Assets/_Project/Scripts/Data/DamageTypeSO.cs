@@ -1,13 +1,13 @@
 using UnityEngine;
 
-namespace Celestia.Data
+namespace RPGStarter.Data
 {
     /// <summary>
     /// Damage type definition (CLAUDE.md §4 — all damage types are SOs).
     /// Used by EnemyDefinitionSO for resistances and by damage numbers for color.
-    /// MVP starter set: Physical, Celestia. Designer can add Fire/Cold/etc. as instances.
+    /// MVP starter set: Physical, RPGStarter. Designer can add Fire/Cold/etc. as instances.
     /// </summary>
-    [CreateAssetMenu(menuName = "Celestia/Damage Type", fileName = "DamageType_New")]
+    [CreateAssetMenu(menuName = "RPGStarter/Damage Type", fileName = "DamageType_New")]
     public sealed class DamageTypeSO : ScriptableObject
     {
         [Header("Identity")]

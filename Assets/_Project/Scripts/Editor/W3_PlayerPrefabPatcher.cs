@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using Celestia.Data;
-using Celestia.Player;
-using Celestia.World;
+using RPGStarter.Data;
+using RPGStarter.Player;
+using RPGStarter.World;
 using UnityEditor;
 using UnityEngine;
 
-namespace Celestia.EditorTools
+namespace RPGStarter.EditorTools
 {
     /// <summary>
     /// Extends the player prefab with W3 mining + crafting gear:
@@ -34,14 +34,14 @@ namespace Celestia.EditorTools
             W3_AssetBuilder.WEAPON_CRAFTING_TABLE,
         };
 
-        [MenuItem("Celestia/W3/3 - Patch Player Prefab (W3 weapons + inventory)")]
+        // [MenuItem stripped — single entry point is RPGStarter/Build Demo]
         public static void Patch()
         {
             var prefabPath = W1_PlayerPrefabBuilder.PREFAB_PATH;
             var inventorySO = AssetDatabase.LoadAssetAtPath<InventorySO>(W3_AssetBuilder.INVENTORY_PLAYER);
             if (inventorySO == null)
             {
-                Debug.LogError($"[W3_PlayerPrefabPatcher] Inventory_Player missing at {W3_AssetBuilder.INVENTORY_PLAYER}. Run Celestia/W3/1 first.");
+                Debug.LogError($"[W3_PlayerPrefabPatcher] Inventory_Player missing at {W3_AssetBuilder.INVENTORY_PLAYER}. Run RPGStarter/W3/1 first.");
                 return;
             }
 
@@ -59,14 +59,14 @@ namespace Celestia.EditorTools
             var equipment = root.GetComponent<WeaponEquipment>();
             if (equipment == null)
             {
-                Debug.LogError("[W3_PlayerPrefabPatcher] WeaponEquipment missing on player prefab. Run Celestia/W2/3 first.");
+                Debug.LogError("[W3_PlayerPrefabPatcher] WeaponEquipment missing on player prefab. Run RPGStarter/W2/3 first.");
                 return;
             }
 
             var w3Weapons = LoadW3Weapons();
             if (w3Weapons.Count == 0)
             {
-                Debug.LogError("[W3_PlayerPrefabPatcher] No W3 weapon SOs found. Run Celestia/W3/2 first.");
+                Debug.LogError("[W3_PlayerPrefabPatcher] No W3 weapon SOs found. Run RPGStarter/W3/2 first.");
                 return;
             }
 

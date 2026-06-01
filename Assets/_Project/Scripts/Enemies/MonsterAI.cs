@@ -1,9 +1,9 @@
-using Celestia.Combat;
-using Celestia.Data;
-using Celestia.Player;
+using RPGStarter.Combat;
+using RPGStarter.Data;
+using RPGStarter.Player;
 using UnityEngine;
 
-namespace Celestia.Enemies
+namespace RPGStarter.Enemies
 {
     /// <summary>
     /// Simple chase-and-melee AI used by Monster1. State machine: Idle → Chase → Attack → Dead.

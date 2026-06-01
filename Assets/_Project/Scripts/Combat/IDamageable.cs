@@ -1,4 +1,4 @@
-namespace Celestia.Combat
+namespace RPGStarter.Combat
 {
     /// <summary>
     /// Anything that can take damage implements this. Interface dispatch keeps the
