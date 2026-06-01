@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RPGStarter.EditorTools
 {
@@ -85,6 +87,9 @@ namespace RPGStarter.EditorTools
 
                 Step(n, total, "Scene cleanup (strip stale RefPillar_* GameObjects)");
                 StripLegacyRefPillars();
+
+                Step(n, total, "Scatter harvest nodes (rocks + trees)");
+                ScatterHarvestNodes();
             }
             finally
             {
@@ -162,6 +167,87 @@ namespace RPGStarter.EditorTools
                 Debug.Log($"[Build] Scene cleanup: stripped {removed} legacy GameObject(s) " +
                           $"(RefPillar_* / DummyParent / TargetDummy) from {SCENE}.");
             }
+        }
+
+        /// <summary>
+        /// Rebuilds the harvest-node scatter in Test_PlayerMovement. Previously the
+        /// rocks ended up clustered on the west side of the floor (a few metres of
+        /// the player) and there were zero trees in the scene at all. This wipes
+        /// any existing MineableRocks / ChoppableTrees roots and places fresh
+        /// instances at random world positions in a ring around the origin, with a
+        /// minimum spacing so they don't pile on top of each other.
+        ///
+        /// Idempotent — re-running gives a fresh scatter every time.
+        /// </summary>
+        private static void ScatterHarvestNodes()
+        {
+            const string SCENE = "Assets/_Project/Tests/PlayMode/Test_PlayerMovement.unity";
+            const string ROCK_PREFAB = "Assets/_Project/Prefabs/Environment/Rock_Mineable.prefab";
+            const string TREE_PREFAB = "Assets/_Project/Prefabs/Environment/Tree_Choppable.prefab";
+
+            var scene = EditorSceneManager.OpenScene(SCENE, OpenSceneMode.Single);
+            if (!scene.IsValid()) return;
+
+            var rockPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(ROCK_PREFAB);
+            var treePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(TREE_PREFAB);
+
+            // Tear down old scatter roots — handles re-running, and also catches the
+            // pre-existing badly-clustered rocks that this builder previously left
+            // baked into the scene file.
+            foreach (var root in scene.GetRootGameObjects())
+            {
+                if (root.name == "MineableRocks" || root.name == "ChoppableTrees")
+                    Object.DestroyImmediate(root);
+            }
+
+            int rockCount = 0, treeCount = 0;
+            if (rockPrefab != null) rockCount = Scatter(scene, rockPrefab, "MineableRocks",
+                                                       count: 7, minRadius: 5f,  maxRadius: 16f, spacing: 3f);
+            else Debug.LogWarning($"[Build] {ROCK_PREFAB} missing — skipping rock scatter.");
+
+            if (treePrefab != null) treeCount = Scatter(scene, treePrefab, "ChoppableTrees",
+                                                       count: 8, minRadius: 7f, maxRadius: 18f, spacing: 3.5f);
+            else Debug.LogWarning($"[Build] {TREE_PREFAB} missing — skipping tree scatter.");
+
+            EditorSceneManager.MarkSceneDirty(scene);
+            EditorSceneManager.SaveScene(scene);
+            Debug.Log($"[Build] Scattered {rockCount} rocks + {treeCount} trees on the test floor.");
+        }
+
+        private static int Scatter(Scene scene, GameObject prefab, string parentName,
+                                   int count, float minRadius, float maxRadius, float spacing)
+        {
+            var parent = new GameObject(parentName);
+            SceneManager.MoveGameObjectToScene(parent, scene);
+
+            var placed = new List<Vector2>(count);
+            int safety = count * 40;
+            int spawned = 0;
+            while (spawned < count && safety-- > 0)
+            {
+                float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2f);
+                float r     = UnityEngine.Random.Range(minRadius, maxRadius);
+                float x = Mathf.Cos(angle) * r;
+                float z = Mathf.Sin(angle) * r;
+
+                // Reject candidate if too close to any already-placed sibling.
+                bool tooClose = false;
+                float sqSpacing = spacing * spacing;
+                for (int i = 0; i < placed.Count; i++)
+                {
+                    float dx = placed[i].x - x;
+                    float dz = placed[i].y - z;
+                    if (dx * dx + dz * dz < sqSpacing) { tooClose = true; break; }
+                }
+                if (tooClose) continue;
+
+                var inst = (GameObject)PrefabUtility.InstantiatePrefab(prefab, parent.transform);
+                inst.transform.position = new Vector3(x, 0f, z);
+                inst.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
+                placed.Add(new Vector2(x, z));
+                spawned++;
+            }
+            return spawned;
         }
 
         // ── Manual escape hatch ──────────────────────────────────────────────
