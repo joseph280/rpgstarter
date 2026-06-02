@@ -64,6 +64,13 @@ namespace RPGStarter.EditorTools
                       "Press I to view inventory.");
         }
 
+        /// <summary>Rebuilds ONLY the Bootstrap HUD (inventory + crafting canvases) in place,
+        /// without re-scattering the world. Used to re-apply HUD layout changes.</summary>
+        public static void RebuildHud()
+        {
+            PatchBootstrap();
+        }
+
         // ── Test scene: rocks ────────────────────────────────────────────────
 
         private static void PatchTestScene()
@@ -281,7 +288,7 @@ namespace RPGStarter.EditorTools
             const float CELL          = 80f;
             const float SPACING       = 6f;
             const float TITLE_HEIGHT  = 44f;
-            const float CRAFT_HEIGHT  = CELL + 24f; // crafting row height
+            const float CRAFT_HEIGHT  = CELL * 2f + SPACING + 24f; // crafting row height — fits the 2×2 input block
             const float HOTBAR_HEIGHT = CELL + 16f;
             const float SECTION_GAP   = 16f;
             const float PAD           = 24f;
@@ -341,10 +348,22 @@ namespace RPGStarter.EditorTools
             craftLayout.childForceExpandWidth  = false;
             craftLayout.childForceExpandHeight = false;
 
+            // 4 input slots grouped as a 2×2 block ("4 squares together") instead of a flat row.
+            var inputsGo = MakeUIChild(craftRowGo.transform, "Inputs");
+            var inputsLE = inputsGo.AddComponent<LayoutElement>();
+            inputsLE.preferredWidth  = CELL * 2f + SPACING;
+            inputsLE.preferredHeight = CELL * 2f + SPACING;
+            var inputsGrid = inputsGo.AddComponent<GridLayoutGroup>();
+            inputsGrid.cellSize        = new Vector2(CELL, CELL);
+            inputsGrid.spacing         = new Vector2(SPACING, SPACING);
+            inputsGrid.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
+            inputsGrid.constraintCount = 2;
+            inputsGrid.childAlignment  = TextAnchor.MiddleCenter;
+
             var inputViews = new InventorySlotView[CraftingPanel.DEFAULT_INPUT_COUNT];
             for (int i = 0; i < CraftingPanel.DEFAULT_INPUT_COUNT; i++)
             {
-                var go = (GameObject)PrefabUtility.InstantiatePrefab(slotPrefab, craftRowGo.transform);
+                var go = (GameObject)PrefabUtility.InstantiatePrefab(slotPrefab, inputsGo.transform);
                 go.name = $"CraftInput_{i}";
                 inputViews[i] = go.GetComponent<InventorySlotView>();
             }

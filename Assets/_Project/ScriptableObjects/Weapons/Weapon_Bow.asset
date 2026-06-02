@@ -16,7 +16,7 @@ MonoBehaviour:
   mainPrefab: {fileID: 8411996729740273069, guid: a35d5eebfd7cb45239e37390a33e1141, type: 3}
   mainHand: 17
   mainLocalPos: {x: 0, y: 0.05, z: 0.02}
-  mainLocalEuler: {x: -90, y: 90, z: 0}
+  mainLocalEuler: {x: 0, y: 90, z: 0}
   mainLocalScale: {x: 0.5, y: 0.5, z: 0.5}
   offHandPrefab: {fileID: 0}
   offHand: 17
